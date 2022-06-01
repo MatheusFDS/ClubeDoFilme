@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header {
+    background-color: #000000;
+    display: flex;
+    color: #d11149;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.container-categoria {
+    /* border: solid 1px black;     */
+    margin-top: 10px;
+    /* border: palevioletred 1px solid;     */
+}
+
+.container-categoria h3 {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;    
+}
+
+.slider {
+    width: 95%;   
+    /* background-color: blue;      */
+    height: 280px;   
+    /* height: 40vh; */
+    /*centraliza o bloco com relação ao container-categoria (pai)*/
+    margin: auto;
+    /*Altera posicionamento para relativo, para que o seu filho <li> seja absoluto e o tome como base (isso fará com que os diversos lis fiquem no mesmo lugar).*/    
+    position: relative;
+}
+
+.slider input {
+    /*não mostrar as tags input (botton radio)*/
+    display: none;
+}
+
+.slider li {
+    display: block;
+    width: 100%;
+    /* height: 300px; */
+    /* border: pink solid 5px; */
+    /*remove as marcações de lista*/
+    list-style: none;    
+    /* max-height: 100vh; */
+    /* border: black solid 2px; */
+    /*altera posicionamento para relative, para que todos li ocupem a mesma posição.*/
+    /*Lembrando: absolute toma como referência o body, a menos que o container pai tenha position relative.*/
+    position: absolute;
+}
+
+.box-filme-lista {
+    /*refere-se a div que contém a lista de filmes*/
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between;
+    
+}
+
+.box-filme-lista img {
+    /*retirar espaço entre imagens, porém nesse caso é descenessário: mantive para fins de estudo */
+    display: block;
+    width: 15%;    
+    /*define max-height para ter a altura do container pai*/
+    max-height: 100%;
+    /* vertical-align: top; */
+}
+
+.slider label {
+    background-color: red;
+    bottom: -10px;
+    cursor: pointer;
+    display: block;
+    height: 3%;
+    position: absolute;
+    width: 1.7%;
+    z-index: 30;
+}
+
+.slider li:nth-child(1) label{
+    left: 1%;    
+}
+
+.slider li:nth-child(2) label{
+    left: 3.3%;
+}
+
+.slider li:nth-child(3) label{
+    left: 5.6%;    
+}
+
+
+.slider div img {
+    opacity: 0;
+    visibility: hidden;
+} 
+
+.slider li input:checked ~ div img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 20;    
+}
+
+
+
+.galery {
+    width: 95%;    
+    height: 75vh;
+    /* width: 1280px;
+    height: 720px;
+    max-width: 100%; */
+    background-color: black;
+    overflow: hidden;
+    /* border: 5px solid; */
+    margin: auto;
+}
+
+.galery .fotos {
+    width: 500%;
+    height: 100%;
+    animation-name: animacao;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;    
+    /* border: solid red 2px;         */
+} 
+
+.galery .fotos img {
+    width: 19.94%;    
+    height: 100%;
+    /* display: none */
+}
+
+/* animation */
+@keyframes animacao{
+    0% {margin-left: 0;}
+    20% {margin-left: 0} /*20% de 20 segundos*/
+    25% {margin-left: -100%; } /*divi fotos possui 500%, assim ao deslocar -100% roda uma imagem*/
+    45% {margin-left: -100%; }
+    50% {margin-left: -200%; }
+    70% {margin-left: -200%; }
+    75% {margin-left: -300%; }
+    95% {margin-left: -300%; }
+    100% {margin-left: -400%; }
+}
