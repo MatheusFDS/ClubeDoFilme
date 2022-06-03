@@ -1,20 +1,15 @@
 var express = require('express');
 const { route } = require('express/lib/application');
-var router = express.Router();
-var ContatoController = require("../controllers/ContatoController")
-var entrar = require("../controllers/login/entrar")
-var cadastro = require("../controllers/login/cadastro")
-const homeInternaController =require("../controllers/homeInternaController")
+const router = express.Router();
+const homepageIndex = require("../controllers/homepageIndex");
+const login = require("../controllers/login");
+
+
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-router.get("/homeInterna", homeInternaController.index);
-router.get("/contato", ContatoController.index);
-router.get("/entrar", entrar.index);
-router.get("/cadastro", cadastro.index);
+router.get("/", homepageIndex.homepageIndex);
+router.get("/entrar", login.entrar);
+router.get("/cadastro", login.cadastro);
 
 module.exports = router;
