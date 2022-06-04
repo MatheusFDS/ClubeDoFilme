@@ -14,7 +14,7 @@
 <main>
         <div id="login">
 
-            <form class="card">
+            <div class="card">
 
                 <div class="card-header">
 
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="card-content">
-
+                    <form action="/users/homeInterna" method="get">
                     <div class="card-content-area">
 
                         <label for="usuario">Usuário</label>
@@ -39,26 +39,31 @@
                         <input type="password" id="password" autocomplete="off">
 
                     </div>
-
-                </div>
-
-                <div class="card-footer">
-
-                    <button class="entrar" type="submit" name="entrar">
+                   
+                        <button class="entrar" type="submit" name="entrar">
+                            <p href="#">Clique aqui para entrar</p>
+                        </button>
+                        
+                    </form>
     
-                        <a href="#"> CLIQUE AQUI PARA ENTRAR</a>
-                    </button>
-
-
-                  
-
-                    <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
-
-                    <a href="#"     class="cadastre-se">Cadastre-se</a>
-
                 </div>
 
-            </form>
+            <div class="card-footer">
+                  
+                    <form action="/recuperar" method="get">
+                     <button type="submit">
+                          <a>Esqueceu a senha?</a>
+                     </button>
+                    </form>
+
+                    <form action="/cadastro" method="get">
+                        <button type="submit">
+                            <a>Nao tem cadastro?</a>
+                        </button>
+                     </form>
+            </div>
+
+        </div>
 
         </div>
     </main>
