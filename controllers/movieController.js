@@ -4,6 +4,9 @@ const movieController = {
     },
     movieDetail: (req, res) => {
         res.render('movieDetail');
+    },
+    movieDetail2: (req, res) => {
+        res.render('movieDetail2');
     }
 };
 
