@@ -9,6 +9,5 @@ router.get('/', movieController.movieList);
 
 // Detalhe do filme
 router.get('/detail', movieController.movieDetail);
-router.get('/detail2', movieController.movieDetail2);
 
 module.exports = router;

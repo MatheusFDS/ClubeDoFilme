@@ -14,7 +14,7 @@
 <main>
         <div id="login">
 
-            <form class="card" action="/user/login" method="post">
+            <form class="card" action="/user/register" method="POST">
 
                 <div class="card-header">
 
@@ -28,12 +28,12 @@
 
                         <label for="usuario">Nome</label>
 
-                        <input type="text" id="usuario" autocomplete="off">
+                        <input type="text" id="usuario" name="usuario" autocomplete="off">
 
                         
-                        <label for="usuario">Emai</label>
+                        <label for="usuario">Email</label>
 
-                        <input type="email" id="usuario" autocomplete="off">
+                        <input type="email" id="usuario" name="email" autocomplete="off">
 
                     </div>
 
@@ -41,11 +41,11 @@
 
                         <label for="password">Senha</label>
 
-                        <input type="password" id="password" autocomplete="off">
+                        <input type="password" id="password" name="senha" autocomplete="off">
 
                         <label for="password">Confirmar Senha</label>
 
-                        <input type="password" id="password" autocomplete="off">
+                        <input type="password" id="password" name="confirmaSenha" autocomplete="off">
 
                     </div>
 
@@ -53,13 +53,11 @@
 
                 <div class="card-footer">
 
-                    <button class="enviar" type="submit" name="enviar">
+                    <button class="enviar" type="submit">
     
-                        <a href="#">CRIAR CADASTRO</a>
-                    </button>
-
-
-                  
+                        <!-- <a href="#">CRIAR CADASTRO</a> -->
+                        CRIAR CADASTRO
+                    </button>                  
 
                    
 

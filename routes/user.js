@@ -8,12 +8,12 @@ const userController = require('../controllers/userController');
 router.get('/register', userController.register);
 
 // Processa formulário de cadastro
-// router.post('register', userController.processRegister);
+router.post('/register', userController.processRegister);
 
 // Visualiza formulário de login
-router.get('/login', userController.login)
+router.get('/login', userController.login);
 
 // Processamento do formulário de login
-// router.post('/login', userController.loginProcess);
+router.post('/login', userController.loginProcess);
 
 module.exports = router;
