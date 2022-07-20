@@ -1,155 +1,175 @@
-header {
-    background-color: #000000;
-    display: flex;
-    color: #d11149;
-    align-items: center;
-    font-size: 14px;
-    justify-content: center;
-    font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-
-
-body {
-
+* {
     padding: 0;
-
-    margin: 0;
-
-    background-color: #FF9000;
-
-
-    font-size: 20px;
-
+    border: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  
+   
 }
 
-#login {
-
+.body-entrar {
     display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 100vh;
-
-    font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-
-}
-
-.card {
-
-    background-color: #000000;
-
-    padding: 50px;
-
-    border-radius: 2px;
-    height: 600px;
-    width:500px;
-
- 
-}
-
-.card-header {
-
-    padding-bottom: 30px;
-
-    opacity: 0.8;
-
-    color: #d1d5de;
-
-}
-
-.card-header::after {
-
-    content: "";
-
-    width: 130px;
-
-    height: 1px;
-
-    background-color: #d1d5de;
-
-    display: block;
-
-    margin-top: -17px;
-
-    margin-left: -5px;
-
-}
-
-.card-content label {
-
-    color: #d1d5de;
-
-    font-size: 25px;
-
-    opacity: 0.8;
-
-}
-
-.card-content-area {
-
-    display: flex;
-
     flex-direction: column;
-
-    padding:10px 10px;
-
-
-}
-
-.card-content-area input {
-
-    margin-top: 10px;
-
-    padding:2px 0px;
-
-    background-color: #e1e1e1;
-
-    border:none;
-
-    outline: none;
-
-    color: #737272;
-
-    font-size: 35px;
-}
-
-.card-footer {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-.card-footer .enviar {
-
+    color: #fff;
     width: 100%;
-
-    height: 70px;
-
+    height: 84vh;
+    padding-top: 50px;
+    align-items: center;
     background-color: #d11149;
 
-    border:none;
+}
 
-    color:#e1e1e1;
+.card-area {
+    
+    display: flex ;
+    flex-direction: column;
+    background:  #000000;;
+    width: 400px;
+    height: 540px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
 
-    margin: 30px 0;
+    
+}
 
+
+
+
+.titulo {
+    display: flex;
+    width: 100%;
+    padding-left:50px ;
+    font-size: 15px;
+
+     
+}
+
+
+.card-inputs {
+    display: flex;
+
+    flex-direction: column;
+    width: 100%;
+    font: 16px;
+}
+
+
+
+
+
+
+
+.email {
+    width: 330px;
+    padding: 5px;
+    height: 25px;
+    color: #000000;
+    border-radius: 10px;
     font-size: 20px;
 }
 
-.card-footer a {
-
-    text-align: center;
-
+.senha {
+    width: 330px;
+    height: 25px;
+    padding: 5px;
+    color: #000000;
+    border-radius: 10px;
     font-size: 20px;
+}
 
-    opacity: 0.8;
+.usuario {
+    width: 330px;
+    padding: 5px;
+    height: 25px;
+    color: #000000;
+    border-radius: 10px;
+    font-size: 20px;
+}
 
-    color: #d1d5de;
+.senha2 {
+    width: 330px;
+    height: 25px;
+    padding: 5px;
+    color: #000000;
+    border-radius: 10px;
+    font-size: 20px;
+}
 
-    text-decoration: none;
+label {
+    padding-top: 20px;
+    font-size: 25px;
 
+}
+
+.div-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    cursor: pointer;
+    
+}
+
+.btn-cadastrar {
+   
+    background: #d11149;
+    border-radius: 5px;
+    width: 80PX;
+    height: 30PX;
+    font-size: 10px;
+    cursor: pointer;
+    color:#fff;
+}
+
+.form-control {
+
+    border-radius: 5px;
+    width: 90PX;
+    font-size: 10px;
+    cursor: pointer;
+    color:#fff;
+}
+
+@media (max-width: 900px) {
+    .card-area {
+        
+        width: 80vw;
+    
+  
+    
+        
+    }
+
+    .email {
+        padding: 2px;
+        width: 70vw;
+        font-size: 16px;
+    }
+    
+    .senha {
+        padding: 2px;
+        width: 70vw;
+        font-size: 16px;
+
+    }
+
+    .usuario {
+        padding: 2px;
+        width: 70vw;
+        font-size: 16px;
+    }
+    
+    .senha2 {
+        padding: 2px;
+        width: 70vw;
+        font-size: 16px;
+
+    }
+    .card-inputs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font: 16px;
+    }
+    
 }

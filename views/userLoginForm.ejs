@@ -5,67 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/userLoginForm.css">
-    <link rel="stylesheet" href="../stylesheets/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login Clube do Filme</title>
+    <title>Login</title>
 </head>
     <body>
-        <%- include('partials/navbar') %>
-<main>
-        <div id="login">
+        <header>
+            <%- include('partials/header') %>
+        </header>
+ <section class="body-entrar">    
+<main class="card-area">
 
-            <div class="card">
+           
+                <div class="titulo">
 
-                <div class="card-header">
-
-                    <h2>Sign In</h2>
+                    <h2>Login</h2>
 
                 </div>
+                <form action="/user/login" method="post">
+                    <div class="card-inputs">       
+                        <label for="email">Email</label>
 
-                <div class="card-content">
-                    <form action="/user/login" method="POST">
-                    <div class="card-content-area">
-
-                        <label for="usuario">Usuário</label>
-
-                        <input type="text" id="usuario" autocomplete="off">
-
-                    </div>
-
-                    <div class="card-content-area">
-
+                        <input class="email" type="email" id="email" autocomplete="off" name="email" >
+                        <% if(typeof errors !== 'undefined'){%>
+                        <ul>
+                            <%  for(let error in errors) { %>
+                                <br>
+                                <b><%= error %></b>
+                                <li><%= errors[error].msg %></li>
+                            <% } %>
+                        </ul>
+                        <% } %>
                         <label for="password">Senha</label>
 
-                        <input type="password" id="password" autocomplete="off">
-
+                        <input class="senha" type="password" id="password" autocomplete="off" name="senha1">
                     </div>
-                   
-                        <button class="entrar" type="submit" name="entrar">
-                            <p href="#">Clique aqui para entrar</p>
-                        </button>
+                    <div class="check">
+                    <input type="checkbox" name="remember_user">
+                    <label for="remember_user"><b>Manter-se conectado</b></label>
+                 </div>
+                        <div class="div-entrar">
                         
-                    </form>
+                        <button class="btn-entrar" type="submit">
+                            ENTRAR
+                        </button>
+                        </div>
+                 </form>
     
-                </div>
+                
 
             <div class="card-footer">
                   
-                    <form action="/recuperar" method="get">
-                     <button type="submit">
-                          <a>Esqueceu a senha?</a>
+                    <form action="/user/recuperar" method="get">
+                     <button class="recuperar" type="submit">
+                          Recuperar senha?
                      </button>
                     </form>
 
                     <form action="/user/register" method="get">
-                        <button type="submit">
-                            <a>Nao tem cadastro?</a>
+                        <button class="registrar" type="submit">
+                            Registre-se
                         </button>
                      </form>
             </div>
 
-        </div>
-
-        </div>
+    
     </main>
+</section>   
     </body>
     </html>

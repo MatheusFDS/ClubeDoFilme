@@ -1,0 +1,48 @@
+.areaErros {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0;
+    border: 0;
+    background: #d11149;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    height: 90vh;
+  color: aliceblue;
+   
+}
+
+.InfoErros {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   width: 500px;
+   height: 540px;
+    color: azure;
+    background: rgb(34, 32, 32);
+    padding: 10px;
+   
+}
+
+.btn-voltar-cadastro {
+    margin-top: 10px;
+    height: 30px;
+    width: 60px;
+    border: 0;
+    background: rgb(44, 189, 155);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  .InfoErros {
+      
+      width: 80vw;
+  
+}
+}

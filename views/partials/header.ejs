@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/stylesheets/header.css' >
+    <title>Clube do Filme</title>
+</head>
+<body class="body-navbar">
+    
+
+    <header class="header-navbar">
+   
+        <div class="header-top">
+            <div class="div-logo">
+                <a class="logo" href="/">
+                    <img src="../images/logo.png"/>
+                </a>
+            </div>
+            <div class="search">
+                 <div class="search-box">
+                    <input type="text" class="search-text"  placeholder="Pesquisar...">
+                     <a href="search-btn">
+                     <img src="../images/icone-search.png" alt="">
+                     </a>
+                </div>
+             </div>
+            <div class="login">
+
+           <% if (locals.isLogged) { %>
+            <form action="/user/profile" method="get">
+                <button class="profile" type="submit">perfil</button>
+            </form>
+            <form action="/user/logout" method="get">
+                <button class="logout" type="submit">sair</button>
+            </form>
+          <% } else { %>
+            <form action="/user/login" method="get">
+            <button class="entrar" type="submit">entrar</button>
+            </form>
+            <form action="/user/register"  method="get">
+            <button class="cadastro" type="submit">cadastro</button>
+            </form>
+            <% } %> 
+            </div>
+        </div>
+
+        <nav class="navbar">
+         
+            <div class="div-logo-mobile">
+                <a class="logo" href="/">
+                    <img src="../images/logo.png"/>
+                </a>
+           </div>
+
+        <div class="search-mobile">
+           <div class="search-box-mobile">
+            <input type="text" class="search-text-mobile" placeholder="Pesquisar...">
+               <a href="search-btn-mobile">
+                   <img src="../images/icone-search.png" alt="">
+               </a>
+           </div>
+         
+        </div>
+        <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+            <ul class="nav-list">
+        
+            <li> 
+                
+        
+                <div class="login-mobile">
+                    <% if(locals.isLogged) { %>
+                       
+                    <form action="/user/profile" method="get">
+                        <button class="profile-mobile" type="submit">perfil</button>
+                        </form>
+                        <form action="/user/logout" method="get">
+                         <button class="logout-mobile" type="submit">sair</button>
+                        </form>
+                        <% } else  { %>
+                                <form action="/user/login" method="get">
+                                <button class="entrar-mobile" type="submit">entrar</button>
+                                </form>
+                                <form action="/user/register" method="get">
+                                 <button class="cadastro-mobile" type="submit">cadastro</button>
+                                </form>
+                        <% } %>
+                 </div>
+              </li>
+                    
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre nos</a></li>
+                <li><a href="#">Lancamentos</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Contate-nos</a></li>  
+            </ul>   
+          
+        </nav>
+    </header>
+    <script src="/javascripts/mobile-navbar.js"></script>
+</body>
+</html>

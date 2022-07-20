@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/cadastro.css">
+    <title>Login</title>
+</head>
+    <body>
+       
+        <header>
+            <%- include('partials/header') %>
+        </header>
+
+        <% if(typeof errors !== 'undefined'){%>
+            <link rel="stylesheet" href="../stylesheets/errorCadastro.css">
+            <div class="areaErros">
+                <h1>Erro de Cadastro</h1>
+            <div class="InfoErros">
+               
+                    <ul>
+                        <%  for(let error in errors) { %>
+                            <b><%= error %></b>
+                            <li><%= errors[error].msg %></li>
+                        <% } %>
+                    </ul>
+             
+                <form action="/user/register" method="get">
+                    <button class="btn-voltar-cadastro">
+                        VOLTAR 
+                    </button>
+                </form>
+            </div>
+            </div>
+            <% } %>
+ 

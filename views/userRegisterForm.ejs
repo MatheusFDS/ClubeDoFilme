@@ -5,67 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/userRegisterForm.css">
-    <link rel="stylesheet" href="../stylesheets/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login Clube do Filme</title>
+    <title>Login</title>
 </head>
     <body>
-        <%- include('partials/navbar') %>
-<main>
-        <div id="login">
-
-            <form class="card" action="/user/register" method="POST">
-
-                <div class="card-header">
+       
+        <header>
+            <%- include('partials/header') %>
+        </header>
+ <section class="body-entrar">    
+    <main class="card-area">
+      
+                <div class="titulo">
 
                     <h2>Cadastro</h2>
 
                 </div>
+                
+                <form action="/user/register"  method="post"                enctype="multipart/form-data">
+                <div class="card-inputs">
+                  
+                  
+                
+                    <label for="usuario">Usuario</label>
+                    <input class="usuario" type="text" name="nome" autocomplete="off">
 
-                <div class="card-content">
+                        <label for="email">Email</label>
 
-                    <div class="card-content-area">
-
-                        <label for="usuario">Nome</label>
-
-                        <input type="text" id="usuario" name="usuario" autocomplete="off">
-
-                        
-                        <label for="usuario">Email</label>
-
-                        <input type="email" id="usuario" name="email" autocomplete="off">
-
-                    </div>
-
-                    <div class="card-content-area">
+                        <input class="email" type="email" name="email" autocomplete="off">
 
                         <label for="password">Senha</label>
 
-                        <input type="password" id="password" name="senha" autocomplete="off">
+                        <input class="senha" type="password" name="senha1" autocomplete="off">
 
-                        <label for="password">Confirmar Senha</label>
+                        <label for="password2">Confirmar Senha</label>
 
-                        <input type="password" id="password" name="confirmaSenha" autocomplete="off">
+                        <input class="senha2" type="password" name="senha2"  autocomplete="off">
+                        
+                        <label  for="foto">Foto de Perfil</label>
 
+                        <input class="form-control" type="file" name="avatar"  autocomplete="off">
                     </div>
-
-                </div>
-
-                <div class="card-footer">
-
-                    <button class="enviar" type="submit">
+                        <div class="div-cadastrar">
+                        <button class="btn-cadastrar" type="submit">
+                            CADASTRAR
+                        </button>
+                        </div>
+                    
+               
+                    
+               
+                 </form>
     
-                        <!-- <a href="#">CRIAR CADASTRO</a> -->
-                        CRIAR CADASTRO
-                    </button>                  
+                
 
-                   
+            
 
-                </div>
-
-            </form>
-
-        </div>
+    
     </main>
+</section>   
     </body>
     </html>

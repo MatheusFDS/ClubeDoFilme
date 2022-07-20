@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "nome": "Luna Santos",
+  "email": "luna@luna.com",
+  "senha1": "$2b$10$YMZdzTkKkTu28OrA5uuNH.w0zMwVGG07OUF6eWq1rRwoUuTIxcQYe",
+  "senha2": "$2b$10$TFjXTeymWSxG8/ct8rdAhuKCQs7yCBFWDd8nJXdnnzeK6/CZIwkk2",
+  "avatar": "1658197968173luna-avatar.jpg"
+ },
+ {
+  "id": 2,
+  "nome": "mat",
+  "email": "mat@mat.com",
+  "senha1": "$2b$10$5j0bydxGGj7vzpT9i8XTF.Te9KYq8YjKRu7jrZcT.ykIx.pTHNqoa",
+  "senha2": "$2b$10$5ZPZLKX75VYDK04sAKlsyORCbaRRVTBzkaKZXaqyNDoAihvJHlEbm",
+  "avatar": "1658208307484luna-avatar.jpg"
+ }
+]
