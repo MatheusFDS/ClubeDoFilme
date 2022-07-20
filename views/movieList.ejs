@@ -18,10 +18,10 @@
         <section class="galery">
             <div class="fotos">
                 <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="Foto 1"></a>
-                <a href="#"></a><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="Foto 2"></a>
-                <a href="#"></a><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="Foto 3"></a>
-                <a href="#"></a><img src="https://cdn.xxl.thumbs.canstockphoto.com.br/pipoca-filme-3d-c%C3%A3o-%C3%B3culos-banco-de-fotos_csp12290032.jpg" alt="Foto 4"></a>
-                <a href="#"></a><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="Foto 1"></a>
+                <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="Foto 2"></a>
+                <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="Foto 3"></a>
+                <a href="#"><img src="https://cdn.xxl.thumbs.canstockphoto.com.br/pipoca-filme-3d-c%C3%A3o-%C3%B3culos-banco-de-fotos_csp12290032.jpg" alt="Foto 4"></a>
+                <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="Foto 1"></a>
             </div>
         </section>
 
@@ -31,42 +31,51 @@
             <!-- Para adicionar nova categoria, copiar bloco abaixo e alterar name, id e label for -->
             <!-- categoria 1-->
             <div class="container-categoria">
-                <h3>Categoria X</h3>
+                <h3>Animação</h3>
                 <ul class="slider">
                     <li>
                         <input type="radio" id="categ1-slide1" name="categ1" checked>
                         <label for="categ1-slide1"></label>                        
-                        <div class="box-filme-lista">                            
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                        <div class="box-filme-lista">    
+                            <% for(i=0; i<6; i++) { %>
+                                <a href="/movie/detail/<%=filmesAnimacao[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesAnimacao[i].avatar%>" alt="<%=filmesAnimacao[i].titulo%>"></a>
+                            <% } %>                                                                       
+                            <!-- <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href=""><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a> -->
                         </div>                        
                     </li>
                     <li>
                         <input type="radio" id="categ1-slide2" name="categ1">
                         <label for="categ1-slide2"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
+                            <% for(i=6; i<12; i++) { %>
+                                <a href="/movie/detail/<%=filmesAnimacao[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesAnimacao[i].avatar%>" alt="<%=filmesAnimacao[i].titulo%>"></a>
+                            <% } %>  
+                            <!-- <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a> -->
                         </div>
                     </li>
                     <li>
                         <input type="radio" id="categ1-slide3" name="categ1">
                         <label for="categ1-slide3"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                            <% for(i=12; i<18; i++) { %>
+                                <a href="/movie/detail/<%=filmesAnimacao[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesAnimacao[i].avatar%>" alt="<%=filmesAnimacao[i].titulo%>"></a>
+                            <% } %>  
+                            <!-- <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a> -->
                         </div>
                     </li>
                 </ul>
@@ -75,42 +84,51 @@
             
             <!-- categoria 2-->
             <div class="container-categoria">
-                <h3>Categoria X</h3>
+                <h3>Drama</h3>
                 <ul class="slider">
                     <li>
                         <input type="radio" id="categ2-slide1" name="categ2" checked>
                         <label for="categ2-slide1"></label>                        
-                        <div class="box-filme-lista">                            
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                        <div class="box-filme-lista"> 
+                            <% for(i=0; i<6; i++) { %>
+                                <a href="/movie/detail/<%=filmesDrama[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesDrama[i].avatar%>" alt="<%=filmesDrama[i].titulo%>"></a>
+                            <% } %>                               
+                            <!-- <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a> -->
                         </div>                        
                     </li>
                     <li>
                         <input type="radio" id="categ2-slide2" name="categ2">
                         <label for="categ2-slide2"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
+                            <% for(i=6; i<12; i++) { %>
+                                <a href="/movie/detail/<%=filmesDrama[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesDrama[i].avatar%>" alt="<%=filmesDrama[i].titulo%>"></a>
+                            <% } %>                               
+                            <!-- <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a> -->
                         </div>
                     </li>
                     <li>
                         <input type="radio" id="categ2-slide3" name="categ2">
                         <label for="categ2-slide3"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                            <% for(i=12; i<18; i++) { %>
+                                <a href="/movie/detail/<%=filmesDrama[i].id_filme%>"><img src="./images/catalogoFilmes/<%=filmesDrama[i].avatar%>" alt="<%=filmesDrama[i].titulo%>"></a>
+                            <% } %>                               
+                            <!-- <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a> -->
                         </div>
                     </li>
                 </ul>
@@ -123,36 +141,36 @@
                         <input type="radio" id="categ3-slide1" name="categ3" checked>
                         <label for="categ3-slide1"></label>                        
                         <div class="box-filme-lista">                            
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
                         </div>                        
                     </li>
                     <li>
                         <input type="radio" id="categ3-slide2" name="categ3">
                         <label for="categ3-slide2"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Sonic-O-filme-768x1076.webp" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
                         </div>
                     </li>
                     <li>
                         <input type="radio" id="categ3-slide3" name="categ3">
                         <label for="categ3-slide3"></label>
                         <div class="box-filme-lista">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
-                            <img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt="">
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/04/Cavaleiro-da-Lua-Serie-768x960.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Spiderhead-Filme-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/Imperio-da-Ostentacao-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
+                            <a href="#"><img src="https://seuladogeek.com.br/wp-content/uploads/2022/05/De-Volta-a-Terra-Serie-768x1075.jpg" alt=""></a>
                         </div>
                     </li>
                 </ul>

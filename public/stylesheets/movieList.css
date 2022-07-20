@@ -41,7 +41,7 @@ body{
     padding: 0;
     width: 95%;
     /* background-color: blue;      */
-    height: 280px;   
+    height: 230px; 
     /* height: 40vh; */
     /*centraliza o bloco com relação ao container-categoria (pai)*/
     margin: auto;
@@ -81,18 +81,33 @@ body{
 .box-filme-lista img {
     /*retirar espaço entre imagens, porém nesse caso é descenessário: mantive para fins de estudo */
     display: block;
+    width: 100%;    
+    /*define max-height para ter a altura do container pai*/
+    /* max-height: 100vh; */
+    /* vertical-align: top; */
+    /* border: black 2px solid;  */
+    height: 200px;
+}
+
+.box-filme-lista a {
+    /*retirar espaço entre imagens, porém nesse caso é descenessário: mantive para fins de estudo */
+    /* display: block; */
     width: 15%;    
     /*define max-height para ter a altura do container pai*/
-    max-height: 100%;
+    /* max-height: 100%; */
     /* vertical-align: top; */
 }
 
+/* .box-filme-lista img:hover {
+    border: 2px solid black;
+} */
+
 .slider label {
-    background-color: red;
+    background-color: black;
     bottom: -10px;
     cursor: pointer;
     display: block;
-    height: 3%;
+    height: 3.5%;
     position: absolute;
     width: 1.7%;
     z-index: 30;
@@ -111,12 +126,12 @@ body{
 }
 
 
-.slider div img {
+.slider div a{
     opacity: 0;
     visibility: hidden;
 } 
 
-.slider li input:checked ~ div img {
+.slider li input:checked ~ div a {
     opacity: 1;
     visibility: visible;
     z-index: 20;    

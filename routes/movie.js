@@ -9,6 +9,6 @@ const movieController = require('../controllers/movieController');
 router.get('/', notLoggedUserMiddleware, movieController.movieList);
 
 // Detalhe do filme
-router.get('/detail', notLoggedUserMiddleware, movieController.movieDetail);
+router.get('/detail/', notLoggedUserMiddleware, movieController.movieDetail);
 
 module.exports = router;

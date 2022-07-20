@@ -14,5 +14,13 @@
   "senha1": "$2b$10$5j0bydxGGj7vzpT9i8XTF.Te9KYq8YjKRu7jrZcT.ykIx.pTHNqoa",
   "senha2": "$2b$10$5ZPZLKX75VYDK04sAKlsyORCbaRRVTBzkaKZXaqyNDoAihvJHlEbm",
   "avatar": "1658208307484luna-avatar.jpg"
+ },
+ {
+  "id": 3,
+  "nome": "hmizuno",
+  "email": "hmizuno@mail.com",
+  "senha1": "$2b$10$2lofEZLmHujL1uX/PiCloO/K.zekOHiVY6vdUa8EI3kPhl4grdR6a",
+  "senha2": "$2b$10$7qzZOkwIlWp8JxSQKlIgROM1s1xh3e5/yChox97hQnPJKPlN4Q82S",
+  "avatar": "1658333548516avatar-masculino.jpg"
  }
 ]
