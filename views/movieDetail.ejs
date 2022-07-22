@@ -3,11 +3,11 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Usuário</title>
+    <title><%=filme.titulo%></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../stylesheets/movieDetail.css">
-    <link rel="stylesheet" href="../stylesheets/navbar.css">
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="/stylesheets/movieDetail.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/navbar.css"> -->
+    <!-- <script src='main.js'></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
@@ -49,29 +49,42 @@
                 </div>    
                     
             </div> -->
+            <!-- <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bLvqoHBptjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
 
             <div class="banner">
                 <span class="subtitle">
-                    Forrest Gump
+                    <!-- Forrest Gump -->
+                    <%=filme.titulo%>
                 </span>
                 <div class="button">
                     <button class="btn"> <i class="fas fa-play"></i>Assistir</button>
                 </div>
             </div>
 
+            
             <div class="details">
                 <H2>Sinopse</H2>
-                <p>Mesmo com o raciocínio lento, Forrest Gump nunca se sentiu desfavorecido. Graças ao apoio da mãe, ele teve uma vida normal. Seja no campo de futebol como um astro do esporte, lutando no Vietnã ou como capitão de um barco de pesca de camarão, Forrest inspira a todos com seu otimismo. Mas a pessoa que Forrest mais ama pode ser a mais difícil de salvar: seu amor de infância, a doce e perturbada Jenny.</p>
+                <!-- <p>Mesmo com o raciocínio lento, Forrest Gump nunca se sentiu desfavorecido. Graças ao apoio da mãe, ele teve uma vida normal. Seja no campo de futebol como um astro do esporte, lutando no Vietnã ou como capitão de um barco de pesca de camarão, Forrest inspira a todos com seu otimismo. Mas a pessoa que Forrest mais ama pode ser a mais difícil de salvar: seu amor de infância, a doce e perturbada Jenny.</p> -->
+                <p><%=filme.sinopse%></p>
+                <br>
+                <br>
                 <h2>Ficha Técnica</h2>
+                <%let filmeCategorias = [];
+                filme.categorias.forEach(categoria => {
+                filmeCategorias.push(categoria.nome_categoria);
+                })
+                filmeCategorias = filmeCategorias.join(', ');%>
                     <ul>
-                    <li><strong>Avaliação:</strong> 8.8</li>
-                    <li><strong>Ano: </strong>1994</li>
-                    <li><strong>Gênero:</strong> Drama/Comédia</li>
-                    <li><strong>Classificação Indicativa:</strong> 12 anos</li>
-                    <li><strong>Duração:</strong> 2h22</li>
-                    <li><strong>Direção:</strong> Robert Zemeckis</li>
-                    <li><strong>Elenco:</strong>Tom Hanks, Gary Sinise, Robin Wright, Mykelti Williamson, Sally Field, Pete Dobson, Dick Cavett e Haley Joel Osment.</li>
-                    <li><strong>Roteiro:</strong> Eric Roth</li>
+                    <li><strong>Avaliação: </strong><%=filme.avaliacao%></li>
+                    <li><strong>Ano: </strong><%=filme.ano%></li>
+                    <li><strong>Gênero: </strong><%=filmeCategorias%>.</li>
+                    <li><strong>Classificação Indicativa: </strong> 12 anos.</li>
+                    <li><strong>Duração: </strong><%=filme.duracao%> minutos.</li>
+                    <li><strong>Direção: </strong><%=filme.direcao%>.</li>
+                    <li><strong>Elenco: </strong><%=filme.elenco%>.</li>
+                    <li><strong>Roteiro: </strong><%=filme.roteiro%>.</li>
                 </ul>
             </div>
 
@@ -137,6 +150,6 @@
             </div>
         </div>
     </div>
-
+<script src="/javascripts/movieDetail.js"></script>
   </body>
 </html>

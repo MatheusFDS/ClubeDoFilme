@@ -18,7 +18,7 @@ body{
         rgba(20,20,20,0.2) 80%, 
         rgba(20,20,20,1) 100%
         ),
-        url(./image/Forrest.jpg);
+        url(../images/usuarios/Forrest.jpg);
         background-size: cover;
         padding: 0.26rem 0.75rem 0 0.75rem;
 }
@@ -175,6 +175,6 @@ body{
     font-size: 12px;
 }
 
-.footer .info ul li{
+/* .footer .info ul li{
     margin-top: 8px;
-}
+} */

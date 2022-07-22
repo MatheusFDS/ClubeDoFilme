@@ -3,24 +3,7 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 const movieController = {
-    movieList: async(req, res) => {
-        // let filmes = await db.Filme.findAll();
-        // console.log(filmes);
-        // res.send(filmes);
-
-        // let categorias = await db.Categoria.findAll();
-        // console.log(categorias);
-        // res.send(categorias);
-
-        // let filmes = await db.Filme.findAll({
-        //     include: {
-        //         model: db.Categoria,
-        //         as: 'categorias',
-        //         required: true
-        //     }
-        // });
-        // console.log(filmes);
-        // res.send(filmes);
+    movieList: async(req, res) => {        
 
         let filmesAnimacao = await db.Filme.findAll({                
             
@@ -44,7 +27,6 @@ const movieController = {
                 }
             },                                                   
         });
-
         
         let filmesDrama = filmesDramaTotal.filter(filmeDrama => {
             
@@ -53,8 +35,7 @@ const movieController = {
                 if(filmeAnimacao.id_filme === filmeDrama.id_filme){
                     return filmeAnimacao;
                 }
-            })
-                        
+            });                        
             
             if(resultado === undefined){
                 console.log(filmeDrama.titulo);
@@ -63,24 +44,34 @@ const movieController = {
                 console.log(resultado.titulo);
             }
 
-        });
-        // res.send(filmesDrama);
-
-        // const {filmes} = filmesAnimacao;
-        // console.log(filmes);
-        // res.send(filmes);
-        // res.send(filmesAnimacao);
-        // res.send(filmesDrama);
-        
-        // console.log(filmesAnimacao);
-        
-        // console.log('aqui')
-        // console.log(x);
+        });        
 
         res.render('movieList', {filmesAnimacao, filmesDrama});
     },
-    movieDetail: (req, res) => {
-        return res.render('movieDetail');
+    movieDetail: async (req, res) => {
+        const {id} = req.params;        
+
+        // let filme = await db.Filme.findByPk(id);
+        let filme = await db.Filme.findOne({                            
+            include: {
+                model: db.Categoria,
+                as: 'categorias',
+                required: true,                
+            },
+            where: {             
+                id_filme: id,
+            }
+        });
+
+        /* Aloca informações de categorias em uma única string, no formato: "categoria A, categoria B"*/
+        // let filmeCategorias = [];
+        // filme.categorias.forEach(categoria => {
+        //     filmeCategorias.push(categoria.nome_categoria);
+        // })
+        // filmeCategorias = filmeCategorias.join(', ');
+        // console.log(filmeCategorias);
+        
+        res.render('movieDetail', {filme});
     },    
 };
 
