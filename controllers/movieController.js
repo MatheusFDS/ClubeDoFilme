@@ -3,7 +3,24 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 const movieController = {
-    movieList: async(req, res) => {        
+    movieList: async(req, res) => {      
+        
+        let filmesLancamentoOuOscar = await db.Filme.findAll({                
+            
+            include: {
+                model: db.Categoria,
+                as: 'categorias',
+                required: true,
+                where: {
+                    [Op.or]: [
+                        {nome_categoria: {[Op.like]: 'Lançamento'}},
+                        {nome_categoria: {[Op.like]: 'Oscar'}},
+                    ]                    
+                }
+            },                                                   
+        });        
+
+        // res.send(filmesLancamentoOuOscar);
 
         let filmesAnimacao = await db.Filme.findAll({                
             
@@ -46,7 +63,7 @@ const movieController = {
 
         });        
 
-        res.render('movieList', {filmesAnimacao, filmesDrama});
+        res.render('movieList', {filmesLancamentoOuOscar, filmesAnimacao, filmesDrama});
     },
     movieDetail: async (req, res) => {
         const {id} = req.params;        
@@ -63,15 +80,28 @@ const movieController = {
             }
         });
 
-        /* Aloca informações de categorias em uma única string, no formato: "categoria A, categoria B"*/
-        // let filmeCategorias = [];
-        // filme.categorias.forEach(categoria => {
-        //     filmeCategorias.push(categoria.nome_categoria);
-        // })
-        // filmeCategorias = filmeCategorias.join(', ');
-        // console.log(filmeCategorias);
+        //captura as categorias do filme selecionado:
+        let filmeCategorias = [];
+        filme.categorias.forEach(categoria => {
+            filmeCategorias.push(categoria.id_categoria);
+        })
         
-        res.render('movieDetail', {filme});
+        // Recomendação de filmes é baseado na categoria do filme que foi selecionado.
+        let filmesRecomendados = await db.Filme.findAll({              
+            include: {
+                model: db.Categoria,
+                as: 'categorias',
+                required: true,
+                where: {
+                    id_categoria: {[Op.in]: filmeCategorias},
+                }
+            },
+            where : {
+                id_filme: {[Op.ne] : id}
+            }                                                
+        });        
+
+        res.render('movieDetail', {filme, filmesRecomendados});
     },    
 };
 

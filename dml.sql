@@ -36,7 +36,13 @@ values
 (33, 'Frank Abagnale Jr. (Leonardo DiCaprio) já foi médico, advogado e co-piloto, tudo isso com apenas 18 anos. Mestre na arte do disfarce, ele aproveita suas habilidades para viver a vida como quer e praticar golpes milionários, que fazem com que se torne o ladrão de banco mais bem-sucedido da história dos Estados Unidos com apenas 17 anos. Mas em seu encalço está o agente do FBI Carl Hanratty (Tom Hanks), que usa todos os meios que tem ao seu dispor para encontrá-lo e capturá-lo.', 'Prenda-me Se For Capaz', 4.2, 2002, 12, 141, 'Steven Spielberg', 'Christopher Walken, Leonardo DiCaprio, Martin Sheen, Nathalie Baye, Tom Hanks', 'Frank Abgnale Jr., Jeff Nathanson, Stan Redding', 'Amblin Entertainment', 'prenda_me_se_for_capaz.jpg'),
 (34, 'A história é centrada em Katherine Johnson (Henson), uma brilhante matemática afroamericana que, ao lado das colegas Dorothy Vaughn e Mary Jackson, foi peça fundamental numa das maiores operações da história dos Estados Unidos: o lançamento do astronauta John Glenn para a órbita da Terra e seu retorno em segurança. Junto, o trio ultrapassou todos os limites de gênero, raça e profissionais para embarcar e serem muito bem-sucedidas nessa missão pioneira.', 'Estrelas Além do Tempo ', 4.3, 2016, 0, 127, 'Theodore Melfi', 'Janelle Monáe, Jim Parsons, Kevin Costner, Kirsten Dunst, Octavia Spencer', 'Alisson Schroeder, Margot Lee Shetterly', 'Fox 2000 Pictures', 'estrelas_alem_do_tempo.jpg'),
 (35, 'Durante seis meses, Jordan Belfort (Leonardo DiCaprio) trabalhou duro em uma corretora de Wall Street, seguindo os ensinamentos de seu mentor Mark Hanna (Matthew McConaughey). Quando finalmente consegue ser contratado como corretor da firma, acontece o Black Monday, que faz com que as bolsas de vários países caiam repentinamente. Sem emprego e bastante ambicioso, ele acaba trabalhando para uma empresa de fundo de quintal que lida com papéis de baixo valor, que não estão na bolsa de valores. É lá que Belfort tem a ideia de montar uma empresa focada neste tipo de negócio, cujas vendas são de valores mais baixos mas, em compensação, o retorno para o corretor é bem mais vantajoso. Ao lado de Donnie (Jonah Hill) e outros amigos dos velhos tempos, ele cria a Stratton Oakmont, uma empresa que faz com que todos enriqueçam rapidamente e, também, levem uma vida dedicada ao prazer.', 'O Lobo de Wall Street', 4.1, 2013, 18, 180, 'Martin Scorsese', 'Leonardo DiCaprio, Margot Robbie, Matthew McConaughey, Rob Reiner, Aaron Glaser', 'Jordan Belfort, Terence Winter', 'Red Granite Pictures', 'lobo_wall_street.jpg'),
-(36, 'Rico e bem sucedido, Will (Sam Claflin) leva uma vida repleta de conquistas, viagens e esportes radicais até ser atingido por uma moto, ao atravessar a rua em um dia chuvoso. O acidente o torna tetraplégico, obrigando-o a permanecer em uma cadeira de rodas. A situação o torna depressivo e extremamente cínico, para a preocupação de seus pais (Janet McTeer e Charles Dance). É neste contexto que Louisa Clark (Emilia Clarke) é contratada para cuidar de Will. De origem modesta, com dificuldades financeiras e sem grandes aspirações na vida, ela faz o possível para melhorar o estado de espírito de Will e, aos poucos, acaba se envolvendo com ele. Baseado no romance homônimo de Jojo Moyes.', 'Como Eu Era Antes de Você', 3.7, 2016, 12, 110, 'Thea Sharrock', 'Emilia Clarke, Sam Claflin, Amber Elizabeth, Ben Lloyd-Hughes, Brendan Coyle', 'Jojo Moyes', 'New Line Cinema', 'como_eu_era_antes_de_voce.jpg')
+(36, 'Rico e bem sucedido, Will (Sam Claflin) leva uma vida repleta de conquistas, viagens e esportes radicais até ser atingido por uma moto, ao atravessar a rua em um dia chuvoso. O acidente o torna tetraplégico, obrigando-o a permanecer em uma cadeira de rodas. A situação o torna depressivo e extremamente cínico, para a preocupação de seus pais (Janet McTeer e Charles Dance). É neste contexto que Louisa Clark (Emilia Clarke) é contratada para cuidar de Will. De origem modesta, com dificuldades financeiras e sem grandes aspirações na vida, ela faz o possível para melhorar o estado de espírito de Will e, aos poucos, acaba se envolvendo com ele. Baseado no romance homônimo de Jojo Moyes.', 'Como Eu Era Antes de Você', 3.7, 2016, 12, 110, 'Thea Sharrock', 'Emilia Clarke, Sam Claflin, Amber Elizabeth, Ben Lloyd-Hughes, Brendan Coyle', 'Jojo Moyes', 'New Line Cinema', 'como_eu_era_antes_de_voce.jpg'),
+(37, 'Thor encontra-se em uma jornada diferente de tudo que ele já enfrentou – uma busca pela paz interior, mas sua aposentadoria é interrompida por um assassino galáctico conhecido como Gorr, o Carniceiro dos Deuses, que busca a extinção dos deuses. Para combater a ameaça, Thor pede a ajuda do Rei Valquíria, Korg, e da ex-namorada Jane Foster que – para surpresa de Thor – inexplicavelmente empunha seu martelo mágico, Mjolnir, revelando-se a Poderosa Thor. Juntos, eles embarcam em uma angustiante aventura cósmica para descobrir o mistério da vingança do Carniceiro dos Deuses e detê-lo antes que seja tarde demais.', 'Thor: Amor e Trovão ', 3.2, 2022, 12, 119, 'Taika Waititi', 'Chris Hemsworth,Christian Bale Gorr, Natalie Portman,Tessa Thompson, Ben Falcone', 'Jennifer Kaytin Robinson, Stan LeeStan Lee, Taika WaititiTaika Waititi', 'Marvel Studios', 'thor.png'),
+(38, 'Depois de sair do serviço ativo da MI6, James Bond vive tranquilamente na Jamaica, mas como nem tudo dura pouco, a vida do espião 007 é agitada mais uma vez. Felix Leiter é um velho amigo da CIA que procura o inglês para um pequeno favor de ajudá-lo em uma missão secreta. O que era pra ser apenas uma missão de resgate de um grupo de cientistas acaba sendo mais traiçoeira do que o esperado, levando o agente inglês 007 ao misterioso vilão, Safin, que utiliza de novas armas de tecnologia avançada e extremamente perigosa.', '007: Sem Tempo para Morrer', 3.6, 2021, 14, 163, 'Cary Fukunaga', 'Daniel Craig, Ana de Armas,Bem Whishaw, Billy Magnussen Logan, Christoph Waltz', 'Cary Fukunaga, Ian Fleming, Neal Purvis, Phoebe Waller-Bridge, Robert WadeRobert Wade', 'Metro-Goldwyn-Mayer', 'sem_tempo.jfif'),
+(39, '“The Box” é um filme musical de jukebox sobre um aspirante a cantor e um produtor musical decadente que costumava ser um figurão na indústria. Juntos, eles embarcam em uma jornada musical.', 'The Box ', 3.4, 2021, 12, 94, 'Yang Jung Woong', 'ChanYeol, Jo Dal Hwan,Jung Hae-Kyun, Kim Ji Hyun', 'Yang Jung Woong', '', 'the_box.jfif'),
+(40, 'Ataque dos Cães acompanha os irmãos Phil (Benedict Cumberbatch) e George (Jesse Plemons), que são ricos proprietários da maior fazenda de Montana. Enquanto o primeiro é brilhante, mas cruel, o segundo é a gentileza em pessoa. Quando George secretamente se casa com a viúva local Rose (Kirsten Dunst), o invejoso Phil faz tudo para atrapalhá-los.', 'Ataque dos cães', 3.7, 2021, 16, 127, 'Jane Campion', 'Benedict Cumberbatch, Kirsten Dunst, Kodi Smit-McPhee, Alice Englert, Frances Conroy', 'Don Winslow, Jane Campion, Nikolaj Arcel, Rasmus Heisterberg, Shane Salerno, Thomas Savage', 'New Zealand Film Commission, BBC Film', 'ataque_dos_caes.jfif'),
+(41, 'Uma garota chamada Mirabel Madrigal cresce como o único membro não mágico de sua família, que vivem escondidos em uma vibrante casa encantada nas montanhas da Colômbia.', 'Encanto', 3.8, 2021, 0, 109, 'Byron Howard, Charise Castro, Smith Jared Bush', 'Stephanie Beatriz, Adassa Martins, Angie Cepeda, Carolina Gaitán, Diane Guerrero', 'Charise Castro Smith, Jared Bush, Lin-Manuel Miranda', 'Walt Disney', 'encanto.jfif'),
+(42, 'A porta do multiverso, cheia de mistério e loucura, se abre. Agora que o Homem de Ferro e o Capitão América partiram após uma batalha feroz contra Thanos, o ex-cirurgião genial, e mago mais forte de todos, Doutor Estranho, deve desempenhar um papel ativo como uma figura central nos Vingadores. No entanto, usar sua magia para manipular o tempo e o espaço à vontade com um feitiço proibido, que é considerado o mais perigoso, abriu as portas para uma misteriosa loucura chamada “o Multiverso”. Para restaurar um mundo onde tudo está mudando, Strange busca a ajuda de seu aliado Wong, o Mago Supremo, e da Feiticeira Escarlate, a Vingadora mais poderosa, Wanda. Mas uma terrível ameaça paira sobre a humanidade e todo o universo, que não pode mais ser detida apenas com seu poder. O que ainda mais surpreendente, é que a maior ameaça do universo se parece exatamente com o Doutor Estranho…', 'Doutor Estranho no Multiverso da Loucura', 3.6, 2022, 14, 126, 'Sam Raimi', 'Benedict Cumberbatch, Benedict Wong, Elizabeth Olsen, Rachel McAdams, Xochitl Gomez', 'Michael Waldron, Stan LeeStan, DitkoSteve Ditk', 'Marvel Studios', 'dr_estranho.png')
 ;
 
 INSERT INTO categorias (id_categoria, nome_categoria)
@@ -56,7 +62,10 @@ values (1, 'Animação'),
 (14, 'Super-Herói'),
 (15, 'Suspense'),
 (16, 'História'),
-(17, 'Música')
+(17, 'Música'),
+(18, 'Lançamento'),
+(19, 'Oscar'),
+(20, 'Faroeste')
 ;
 
 INSERT INTO filme_categoria(id_filme_categoria, id_filme, id_categoria)
@@ -182,9 +191,31 @@ values (DEFAULT, 1, 1),
 (DEFAULT, 35, 13),
 (DEFAULT, 35, 7),
 (DEFAULT, 36, 9),
-(DEFAULT, 36, 10)
+(DEFAULT, 36, 10),
+(DEFAULT, 37, 12),
+(DEFAULT, 37, 2),
+(DEFAULT, 37, 14),
+(DEFAULT, 37, 18),
+(DEFAULT, 38, 12),
+(DEFAULT, 38, 19),
+(DEFAULT, 39, 9),
+(DEFAULT, 39, 8),
+(DEFAULT, 39, 19),
+(DEFAULT, 40, 9),
+(DEFAULT, 40, 20),
+(DEFAULT, 40, 6),
+(DEFAULT, 40, 19),
+(DEFAULT, 41, 1),
+(DEFAULT, 41, 4),
+(DEFAULT, 41, 5),
+(DEFAULT, 41, 19),
+(DEFAULT, 42, 14),
+(DEFAULT, 42, 12),
+(DEFAULT, 42, 2),
+(DEFAULT, 42, 18)
 ;
 
 SELECT * FROM FILMES;
 SELECT * FROM CATEGORIAS;
 SELECT * FROM FILME_CATEGORIA;
+

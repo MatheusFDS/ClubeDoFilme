@@ -43,10 +43,10 @@ CREATE TABLE IF NOT EXISTS `grupodh`.`filmes` (
   `ano` SMALLINT NOT NULL,
   `faixa_etaria` TINYINT NOT NULL,
   `duracao` SMALLINT NOT NULL,
-  `direcao` VARCHAR(40) NOT NULL,
+  `direcao` VARCHAR(50) NOT NULL,
   `elenco` VARCHAR(400) NOT NULL,
   `roteiro` VARCHAR(400) NOT NULL,
-  `produtora` VARCHAR(30),
+  `produtora` VARCHAR(40),
   `avatar` VARCHAR(35) NOT NULL,
   PRIMARY KEY (`id_filme`))
 ENGINE = InnoDB

@@ -14,7 +14,7 @@
     <header>
         <%- include('partials/header') %>
     </header>
-
+    <div id=avatar><%=filme.avatar%></div>
     <div class="container">
         <div class="hero">
             
@@ -92,22 +92,22 @@
                 <span>Você também pode gostar</span>
                 <div class="slider">
                     <div class="movies">
-                        <img src="/images/usuarios/filme1.png" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[0].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[0].avatar%>" alt="<%=filmesRecomendados[0].titulo%>"></a>
                     </div>
                     <div class="movies">
-                        <img src="/images/usuarios/filme2.png" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[1].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[1].avatar%>" alt="<%=filmesRecomendados[1].titulo%>"></a>
                     </div>
                     <div class="movies">
-                        <img src="/images/usuarios/filme3.png" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[2].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[2].avatar%>" alt="<%=filmesRecomendados[2].titulo%>"></a>
                     </div>
                     <div class="movies">
-                        <img src="/images/usuarios/filme4.png" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[3].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[3].avatar%>" alt="<%=filmesRecomendados[3].titulo%>"></a>
                     </div>
                     <div class="movies">
-                        <img src="/images/usuarios/filme5.png" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[4].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[4].avatar%>" alt="<%=filmesRecomendados[4].titulo%>"></a>
                     </div>
                     <div class="movies">
-                        <img src="/images/usuarios/filme6.jpg" alt="">
+                        <a href="/movie/detail/<%=filmesRecomendados[5].id_filme%>"><img src="/images/catalogoFilmes/<%=filmesRecomendados[5].avatar%>" alt="<%=filmesRecomendados[5].titulo%>"></a>
                     </div>
                 </div>
             </div>
