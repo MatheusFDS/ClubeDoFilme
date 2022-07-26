@@ -18,7 +18,8 @@ body{
         rgba(20,20,20,0.2) 80%, 
         rgba(20,20,20,1) 100%
         ),
-        url(../images/usuarios/Forrest.jpg);   
+        /* url(../images/usuarios/Forrest.jpg);    */
+        url(../images/usuarios/none_black.png);
         /* url(../images/catalogoFilmes/a_fera_do_mar.jpg); */
         /* background-size: cover; */
         background-size: 100% 100%; 
@@ -198,4 +199,11 @@ body{
 .movies img {
     width: 100%;
     max-height: 100%;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
 }

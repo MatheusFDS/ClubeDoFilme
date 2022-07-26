@@ -23,11 +23,19 @@ window.addEventListener('load', function () {
     // containerImagem.style.backgroundImage = "linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(20,20,20,0.2) 80%, rgba(20,20,20,1) 100%), url('../../images/catalogoFilmes/a_fera_do_mar.jpg')";
     containerImagem.style.backgroundImage = "linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(20,20,20,0.2) 80%, rgba(20,20,20,1) 100%), url('../../images/catalogoFilmes/"+stringAvatarFilme+"')"
 
-    // containerImagem.style.backgroundImage ="linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(20,20,20,0.2) 80%, rgba(20,20,20,1) 100%), url('../../images/catalogoFilmes/a_fera_do_mar.jpg'); background-size: cover; padding: 0.26rem 0.75rem 0 0.75rem;"
+    // dispara evento ao clicar no botão de assistir filme
+    botaoAssistir.addEventListener('click', function() {        
+        // Esconde div exibida
+        let divPrincipal = document.querySelector('.container');
+        divPrincipal.style.display="none";
 
-    // containerImagem.style.backgroundImage = ;
+        // Exibe a div com o filme
+        let divPlayer = document.querySelector('.player');
+        divPlayer.style.display="flex";
 
-    // let container = document.querySelector('.banner');    
-    // container.style.display = 'none';
-    // console.log(container);
+    });    
+
+    // let divPrincipal = document.querySelector('.container');
+    // divPrincipal.style.display="none";
+
 });

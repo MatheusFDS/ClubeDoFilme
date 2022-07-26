@@ -24,7 +24,8 @@ module.exports = function(sequelize, DataType) {
             type: DataType.STRING,
             allowNull: true
         },
-        avatar: DataType.STRING
+        avatar: DataType.STRING,
+        rota_filme: DataType.STRING        
     }
 
     let config = {

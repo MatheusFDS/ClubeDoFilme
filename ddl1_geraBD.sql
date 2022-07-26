@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `grupodh`.`filmes` (
   `roteiro` VARCHAR(400) NOT NULL,
   `produtora` VARCHAR(40),
   `avatar` VARCHAR(35) NOT NULL,
+  `rota_filme` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id_filme`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
