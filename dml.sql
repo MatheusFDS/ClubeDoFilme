@@ -219,3 +219,8 @@ SELECT * FROM FILMES;
 SELECT * FROM CATEGORIAS;
 SELECT * FROM FILME_CATEGORIA;
 
+/*insere um usuário para teste*/
+insert into usuarios(id_matricula, nome_completo, email, data_cadastro, id_assinatura, avatar)
+values (1, 'heber', 'hmizuno@mail.com', '1991-07-02', null, 'teste');
+
+

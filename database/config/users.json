@@ -22,5 +22,21 @@
   "senha1": "$2b$10$2lofEZLmHujL1uX/PiCloO/K.zekOHiVY6vdUa8EI3kPhl4grdR6a",
   "senha2": "$2b$10$7qzZOkwIlWp8JxSQKlIgROM1s1xh3e5/yChox97hQnPJKPlN4Q82S",
   "avatar": "1658333548516avatar-masculino.jpg"
+ },
+ {
+  "id": 4,
+  "nome": "Heber Oswaldo Marques Mizuno",
+  "email": "heber_mm@hotmail.com",
+  "senha1": "$2b$10$81BuxFxc26AaMHCUZ7p4UOWZsoCZmngQ.CTaDSuh400jepBOqXzYq",
+  "senha2": "$2b$10$CN95nksV.DVS9RVyUxsGAeiIs.NfCP3opvqSsWEBuut325fSTeCQ2",
+  "avatar": "1658889717550avatar-masculino.jpg"
+ },
+ {
+  "id": 5,
+  "nome": "Heber Oswaldo Marques Mizuno",
+  "email": "hmizuno@mail.com",
+  "senha1": "$2b$10$G2cdaWU1ZIqWpDOzA7uRROv7NeVzZ38ddn9tBiUJ5PwZOUCqrxghu",
+  "senha2": "$2b$10$dIo24Nbv/3ZVx2Y1j/.mYOGofet0N4Kb/Gl057FvmTTJVRlTzZxy.",
+  "avatar": "1658890390377avatar-masculino.jpg"
  }
 ]

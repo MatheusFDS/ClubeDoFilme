@@ -59,12 +59,14 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `grupodh`.`usuarios` (
   `id_matricula` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(30) NOT NULL,
-  `nickname` VARCHAR(15) NOT NULL,
-  `nascimento` DATE NULL DEFAULT NULL,
+  `nome_completo` VARCHAR(50) NOT NULL,
+  -- `nickname` VARCHAR(15) NOT NULL,
+  -- `nascimento` DATE NULL DEFAULT NULL, 
   `email` VARCHAR(50) NOT NULL,
   `data_cadastro` DATE NULL DEFAULT NULL,
-  `id_assinatura` INT(11) NOT NULL,
+  `id_assinatura` INT(11) NULL,
+  `avatar` VARCHAR(50) NOT NULL,
+  `senha` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_matricula`),
   -- INDEX `id_assinatura` (`id_assinatura` ASC) VISIBLE, 
   CONSTRAINT `usuarios_ibfk_1`
