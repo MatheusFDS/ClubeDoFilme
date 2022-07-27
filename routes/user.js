@@ -12,6 +12,7 @@ const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware'
 
 // Controllers
 const userController = require('../controllers/userController');
+const checkoutController = require('../controllers/checkoutController');
 
 // Visualiza formulário de cadastro
 router.get('/register', loggedUserMiddleware, userController.register);
@@ -34,5 +35,7 @@ router.get('/logout', notLoggedUserMiddleware, userController.logout);
 
 // Profile
 router.get('/profile', notLoggedUserMiddleware, userController.profile);
+
+router.get('/checkout', notLoggedUserMiddleware, checkoutController.checkout);
 
 module.exports = router;
