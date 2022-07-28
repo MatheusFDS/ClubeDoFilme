@@ -20,12 +20,13 @@ USE `grupodh` ;
 -- -----------------------------------------------------
 -- Table `grupodh`.`assinaturas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `grupodh`.`assinaturas` (
-  `id_assinatura` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome_assinatura` VARCHAR(30) NOT NULL,
-  `tipo_assinatura` ENUM('BASICA', 'PADRAO', 'AVANCADA') NOT NULL,
+CREATE TABLE IF NOT EXISTS `grupodh`.`produtos` (
+  `id_produto` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome_produto` VARCHAR(30) NOT NULL,
+  `meses` INT NOT NULL,
+  -- `tipo_assinatura` ENUM('BASICA', 'PADRAO', 'AVANCADA') NOT NULL,
   `valor` DECIMAL(6,2) NOT NULL,
-  PRIMARY KEY (`id_assinatura`))
+  PRIMARY KEY (`id_produto`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -64,14 +65,14 @@ CREATE TABLE IF NOT EXISTS `grupodh`.`usuarios` (
   -- `nascimento` DATE NULL DEFAULT NULL, 
   `email` VARCHAR(50) NOT NULL,
   `data_cadastro` DATE NULL DEFAULT NULL,
-  `id_assinatura` INT(11) NULL,
+  -- `id_assinatura` INT(11) NULL,
   `avatar` VARCHAR(50) NOT NULL,
-  `senha` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`id_matricula`),
+  `senha` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id_matricula`))
   -- INDEX `id_assinatura` (`id_assinatura` ASC) VISIBLE, 
-  CONSTRAINT `usuarios_ibfk_1`
-    FOREIGN KEY (`id_assinatura`)
-    REFERENCES `grupodh`.`assinaturas` (`id_assinatura`))
+  -- CONSTRAINT `usuarios_ibfk_1`
+--     FOREIGN KEY (`id_assinatura`)
+--     REFERENCES `grupodh`.`assinaturas` (`id_assinatura`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -134,18 +135,19 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `grupodh`.`mensalidade`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `grupodh`.`mensalidade` (
-  `id_mensalidade` INT(11) NOT NULL AUTO_INCREMENT,
-  `valor` DECIMAL(6,2) NOT NULL,
-  `vencimento` DATE NOT NULL,
+CREATE TABLE IF NOT EXISTS `grupodh`.`pedidos` (
+  `id_pedido` INT(11) NOT NULL AUTO_INCREMENT,
+  `valor_pago` DECIMAL(6,2) NOT NULL,
+  dt_inic_assinatura DATE NOT NULL,
+  `dt_fim_assinatura` DATE NOT NULL,  
   `id_matricula` INT(11) NOT NULL,
-  `id_assinatura` INT(11) NOT NULL,
-  PRIMARY KEY (`id_mensalidade`),
+  `id_produto` INT(11) NOT NULL,
+  PRIMARY KEY (`id_pedido`),
   -- INDEX `id_assinatura` (`id_assinatura` ASC) VISIBLE,
 --   INDEX `id_matricula` (`id_matricula` ASC) VISIBLE,
   CONSTRAINT `mensalidade_ibfk_1`
-    FOREIGN KEY (`id_assinatura`)
-    REFERENCES `grupodh`.`assinaturas` (`id_assinatura`),
+    FOREIGN KEY (`id_produto`)
+    REFERENCES `grupodh`.`produtos` (`id_produto`),
   CONSTRAINT `mensalidade_ibfk_2`
     FOREIGN KEY (`id_matricula`)
     REFERENCES `grupodh`.`usuarios` (`id_matricula`))

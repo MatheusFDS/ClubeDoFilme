@@ -2,30 +2,30 @@
 module.exports = function(sequelize, DataType) {
     
     //nome da Model
-    let alias = 'Usuario';
+    let alias = 'Pedido';
 
     //define colunas
     let cols = {
-        id_matricula: {
+        id_pedido: {
             type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
-        },
-        nome_completo: DataType.STRING,
-        email: DataType.STRING,
-        data_cadastro: DataType.DATE,        
-        avatar: DataType.STRING,
-        senha: DataType.STRING
+        },        
+        valor_pago: DataType.FLOAT,
+        dt_inic_assinatura: DataType.DATE,
+        dt_fim_assinatura: DataType.DATE,
+        id_matricula: DataType.INTEGER,
+        id_produto: DataType.INTEGER,
     }
 
     let config = {
-        tableName: 'usuarios',
+        tableName: 'pedidos',
         timestamps: false
     };
 
-    let Usuario = sequelize.define(alias, cols, config);
+    let Pedido = sequelize.define(alias, cols, config);
   
-    // Filme.associate = function(models) {
+    // Pedido.associate = function(models) {
     //     Filme.belongsToMany(models.Categoria, {
     //         as: "categorias",
     //         through: 'filme_categoria',
@@ -35,5 +35,5 @@ module.exports = function(sequelize, DataType) {
     //     });
     // };
 
-    return Usuario;
+    return Pedido;
 };

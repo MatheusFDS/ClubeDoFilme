@@ -220,7 +220,16 @@ SELECT * FROM CATEGORIAS;
 SELECT * FROM FILME_CATEGORIA;
 
 /*insere um usuário para teste*/
-insert into usuarios(id_matricula, nome_completo, email, data_cadastro, id_assinatura, avatar)
-values (1, 'heber', 'hmizuno@mail.com', '1991-07-02', null, 'teste');
+-- insert into usuarios(id_matricula, nome_completo, email, data_cadastro, id_assinatura, avatar)
+-- values (1, 'heber', 'hmizuno@mail.com', '1991-07-02', null, 'teste');
 
+INSERT INTO produtos(id_produto, nome_produto, meses, valor)
+VALUES (3,  'Assinatura anual', 12, 189.90),
+(2,  'Assinatura semestral', 6, 104.90),
+(1,  'Assinatura mensal', 1, 18.90)
 
+-- insert into pedidos(id_pedido, valor_pago, dt_inic_assinatura, dt_fim_assinatura, id_matricula, id_produto)
+-- values(default, 18.9, '2022-07-08', '2022-07-08', 3, 1)
+
+-- select * from pedidos
+-- select * from usuarios

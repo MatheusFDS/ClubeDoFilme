@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../stylesheets/checkout.css">
+    <link rel="stylesheet" href="../stylesheets/checkout.css">
     <title>Clube do Filme</title>
 </head>
 <body>
@@ -20,15 +20,12 @@
     <div class='checkout'>
       <div class='order'>
         <h2>Carrinho</h2>
-        <!-- <h5>ID do pedido #0101</h5> -->
+        <h5>ID do pedido #0101</h5>
         <ul class='order-list'>
-          <%produtos.forEach(produto => {%>
-            <li><h4><%=produto.nome_produto%></h4><h5>R$<%=produto.valor%></h5><div class="id_produto"><%=produto.id_produto%></div></li>
-          <% }) %>
-          <!-- <li><h4>Assinatura anual</h4><h5>R$189,90</h5></li>
-          <li><h4>Bônus Qual é o filme </h4><h5>R$0,00</h5></li> -->
+          <li><h4>Assinatura anual</h4><h5>R$189,90</h5></li>
+          <li><h4>Bônus Qual é o filme </h4><h5>R$0,00</h5></li>
         </ul>
-        <h5 class='total'>Total</h5><h1 id="total_valor">R$ 0.00</h1>
+        <h5 class='total'>Total</h5><h1>R$ 189.90</h1>
       </div>
       <h2>Pagamento</h2>
       <div id='payment' class='payment'>
@@ -38,11 +35,11 @@
             <h5>Numero do Cartão </h5>
             <h6 id='label-cardnumber'>0000 0000 0000 0000</h6>
             <h5>Venc.<span>CVC</span></h5>
-            <h6 id='label-cardexpiration'>00/0000<span>000</span></h6>
+            <h6 id='label-cardexpiration'>00 / 0000<span>000</span></h6>
           </div>
           <div class='wave'></div>
         </div>
-        <form class='card-form' action="/user/checkout" method="POST">  
+        <div class='card-form'>
             <p class='field'>
             <svg id='i-cardfront' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 28 28;" xml:space="preserve" width="28px" height="28px"><g>
               <path d="M471.5,88h-432C17.72,88,0,105.72,0,127.5v256C0,405.28,17.72,423,39.5,423h432c21.78,0,39.5-17.72,39.5-39.5v-256   C511,105.72,493.28,88,471.5,88z M496,383.5c0,13.509-10.991,24.5-24.5,24.5h-432C25.991,408,15,397.009,15,383.5v-256   c0-13.509,10.991-24.5,24.5-24.5h432c13.509,0,24.5,10.991,24.5,24.5V383.5z" fill="#dddfe6"/>
@@ -68,7 +65,7 @@
                 <path d="M415.5,160h-48c-21.78,0-39.5,17.72-39.5,39.5s17.72,39.5,39.5,39.5h48c21.78,0,39.5-17.72,39.5-39.5S437.28,160,415.5,160   z M415.5,224h-48c-13.509,0-24.5-10.991-24.5-24.5s10.991-24.5,24.5-24.5h48c13.509,0,24.5,10.991,24.5,24.5S429.009,224,415.5,224   z" fill="#dddfe6"/>
               </g>
             </svg>
-            <input type='text' id='cardnumber' name='cardnumber' maxlength='19' placeholder='1234 5678 9123 4567' pattern='[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}' title='Card Number' />
+            <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567' pattern='\d*' title='Card Number' />
           </p>
             <p class='field space'>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="i-calendar" x="0px" y="0px" viewBox="0 0 191.259 191.259" style="enable-background:new 0 0 191.259 191.259;" xml:space="preserve" width="28px" height="28px">
@@ -97,7 +94,7 @@
                 <path d="M175.321,15.98h-7.969v-3.985c0-6.601-5.354-11.954-11.954-11.954   c-6.603,0-11.954,5.352-11.954,11.954v3.985h-95.63v-3.985c0-6.601-5.354-11.954-11.954-11.954   c-6.603,0-11.954,5.352-11.954,11.954v3.985h-7.969C7.136,15.98,0,23.116,0,31.918v15.854v7.969v119.537   c0,8.802,7.136,15.938,15.938,15.938h159.382c8.802,0,15.938-7.136,15.938-15.938V55.742v-7.969V31.918   C191.259,23.116,184.123,15.98,175.321,15.98z M151.413,23.949V15.98v-3.985c0-2.201,1.782-3.985,3.985-3.985   c2.198,0,3.984,1.784,3.984,3.985v3.985v7.969v3.984c0,2.2-1.786,3.985-3.984,3.985c-2.202,0-3.985-1.784-3.985-3.985V23.949z    M31.876,23.949V15.98v-3.985c0-2.201,1.782-3.985,3.985-3.985c2.199,0,3.985,1.784,3.985,3.985v3.985v7.969v3.984   c0,2.2-1.786,3.985-3.985,3.985c-2.202,0-3.985-1.784-3.985-3.985V23.949z M183.29,175.279c0,4.399-3.564,7.969-7.969,7.969H15.938   c-4.405,0-7.969-3.57-7.969-7.969V55.742H183.29V175.279z M183.29,47.773H7.969V31.918c0-4.403,3.564-7.969,7.969-7.969h7.969   v3.984c0,6.601,5.35,11.954,11.954,11.954c6.6,0,11.954-5.352,11.954-11.954v-3.984h95.63v3.984c0,6.601,5.35,11.954,11.954,11.954   c6.599,0,11.954-5.352,11.954-11.954v-3.984h7.969c4.405,0,7.969,3.566,7.969,7.969V47.773z" fill="#dddfe6"/>
                 </g>
               </svg>
-              <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY" maxlength='7' pattern="[0-9]{2}/[0-9]{4}" title='Card Expiration Date' />
+              <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY" pattern="\d*" title='Card Expiration Date' />
           </p>
             <p class='field'>
               <svg id='i-cardback' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 28 28;" xml:space="preserve" width="28px" height="28px">
@@ -124,13 +121,10 @@
                 <path d="M511,159.498V127.5c0-21.78-17.72-39.5-39.5-39.5h-432C17.72,88,0,105.72,0,127.5v47.998c0,0.001,0,0.003,0,0.005V383.5   C0,405.28,17.72,423,39.5,423h432c21.78,0,39.5-17.72,39.5-39.5V159.502C511,159.501,511,159.499,511,159.498z M496,184h-6.394   l6.394-6.394V184z M449.606,184l41-41H496v13.394L468.394,184H449.606z M409.606,184l41-41h18.787l-41,41H409.606z M369.606,184   l41-41h18.787l-41,41H369.606z M329.606,184l41-41h18.787l-41,41H329.606z M289.606,184l41-41h18.787l-41,41H289.606z M249.606,184   l41-41h18.787l-41,41H249.606z M209.606,184l41-41h18.787l-41,41H209.606z M169.606,184l41-41h18.787l-41,41H169.606z M129.606,184   l41-41h18.787l-41,41H129.606z M89.606,184l41-41h18.787l-41,41H89.606z M49.606,184l41-41h18.787l-41,41H49.606z M15,184v-5.394   L50.606,143h18.787l-41,41H15z M15,143h14.394L15,157.394V143z M39.5,103h432c13.509,0,24.5,10.991,24.5,24.5v0.5h-8.497   c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0   h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.004,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0h-39.995   c-0.001,0-0.003,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0H87.502c-0.001,0-0.003,0-0.005,0   H47.502c-0.001,0-0.003,0-0.005,0H15v-0.5C15,113.991,25.991,103,39.5,103z M471.5,408h-432C25.991,408,15,397.009,15,383.5V199   h481v184.5C496,397.009,485.009,408,471.5,408z" fill="#dddfe6"/>
                 </g>
               </svg>
-              <input type='text' id='cardcvc' name='cardcvc' placeholder="123" maxlength='3' pattern="[0-9]{3}" title='CVC Code' />
-              <br>
-              <input type='text' id='input_total' name='input_total'/>
-              <input type='number' id='input_id' name='input_id'/>
+              <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*" title='CVC Code' />
           </p>
-          <button  type="submit" class='button-cta' title='Confirm your purchase'><span>Iniciar Assinatura</span></button>
-        </form>        
+          <button class='button-cta' title='Confirm your purchase'><span>Iniciar Assinatura</span></button>
+        </div>
       </div>
       <div id='paid' class='paid'>
         <svg id='icon-paid' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 310.277 310.277" style="enable-background:new 0 0 310.277 310.277;" xml:space="preserve" width="180px" height="180px">
@@ -143,6 +137,8 @@
 
 
 
-<script src="/javascripts/checkout.js"></script>
+
 </body>
+
+
 </html>

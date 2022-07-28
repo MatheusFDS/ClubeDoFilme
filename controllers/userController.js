@@ -106,7 +106,7 @@ const userController = {
         };
 
         
-        // let userToLogin = User.findUserbyField('email', req.body.email);
+        // let userToLogin = User.findUserbyField('email', req.body.email);        
         if (userToLogin) {
             let isPasswordVerified = bcrypt.compareSync(req.body.senha1, userToLogin.senha)
 
@@ -116,7 +116,7 @@ const userController = {
                 req.session.userLogged = userToLogin
 
                 if (req.body.remember_user) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 })
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 })                    
                 }
                 return res.redirect('/movie')
             }
