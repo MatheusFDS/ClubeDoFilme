@@ -55,11 +55,11 @@ const movieController = {
             });                        
             
             if(resultado === undefined){
-                console.log(filmeDrama.titulo);
+                // console.log(filmeDrama.titulo);
                 return filmeDrama;
-            } else {
+            } /*else {
                 console.log(resultado.titulo);
-            }
+            }*/
 
         });        
 
