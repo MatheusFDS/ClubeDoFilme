@@ -103,6 +103,36 @@ const movieController = {
 
         res.render('movieDetail', {filme, filmesRecomendados});
     },    
+    movieSearch: async (req, res) => {
+        
+        let {filmePesquisado} = req.query;
+
+        let filmesEncontrados = await db.Filme.findAll({
+            where: {
+                titulo: {
+                    [Op.like]: `%${filmePesquisado}%`
+                }
+            }
+        })
+        
+        let mensagemRetorno;
+        if (filmesEncontrados.length === 0) {
+            mensagemRetorno = "A busca por '"+filmePesquisado+"' não retornou nenhum resultado.";
+            console.log(mensagemRetorno)
+        }
+        else if (filmesEncontrados.length === 1) {
+            mensagemRetorno = "Sua busca por '"+filmePesquisado+"' retornou 1 resultado.";
+            console.log(mensagemRetorno)
+        }
+        else  {
+            mensagemRetorno = "Sua busca por '"+filmePesquisado+"' retornou "+filmesEncontrados.length+" resultados.";
+            console.log(mensagemRetorno)
+        }
+
+        // res.send(filmesEncontrados);
+
+        res.render('movieSearch', {filmePesquisado, filmesEncontrados, mensagemRetorno})
+    }
 };
 
 module.exports = movieController;

@@ -42,3 +42,17 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+// Evento para pesquisa de filmes (Trata o href da tag a), aplicado na versão web e mobile
+let searchLink = document.querySelector('.search-box a')
+let searchInput = document.querySelector('.search-box input')
+searchLink.addEventListener('click', () => {
+  searchLink.href = '/movie/search?filmePesquisado=' + searchInput.value;  
+})
+
+let searchLinkMobile = document.querySelector('.search-box-mobile a')
+let searchInputMobile = document.querySelector('.search-box-mobile input')
+console.log(searchLinkMobile);
+searchLinkMobile.addEventListener('click', () => {
+  searchLinkMobile.href = '/movie/search?filmePesquisado=' + searchInputMobile.value;  
+})

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/movieSearch.css">        
+    <title>Pesquisa '<%=filmePesquisado%>'</title>
+</head>
+<body>        
+ <header>
+    <%- include('partials/header') %>
+</header>
+<main>
+    <h2 class="h-busca"><%=mensagemRetorno%></h1>
+    <div class="container-filmes">
+        <%filmesEncontrados.forEach(filme => {%>
+            <div class="filme">
+                <a href="/movie/detail/<%=filme.id_filme%>"><img src="../images/catalogoFilmes/<%=filme.avatar%>" alt="<%=filme.titulo%>"></a>
+            </div>
+        <% }) %>
+        
+        <!-- <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>        
+        <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>        
+        <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>        
+        <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>        
+        <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>        
+        <div class="filme">
+            <a href=""><img src="../images/catalogoFilmes/a_fera_do_mar.jpg" alt=""></a>
+        </div>         -->
+    </div>
+</main>
+</body>

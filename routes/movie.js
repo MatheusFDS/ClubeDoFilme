@@ -8,8 +8,10 @@ const movieController = require('../controllers/movieController');
 // Catálogo de filmes
 router.get('/', notLoggedUserMiddleware, movieController.movieList);
 
-// Detalhe do filme
+// Detalhes do filme
 router.get('/detail/:id', notLoggedUserMiddleware, movieController.movieDetail);
-router.get('/detail', notLoggedUserMiddleware, movieController.movieDetail);
+// router.get('/detail', notLoggedUserMiddleware, movieController.movieDetail);
+
+router.get('/search', notLoggedUserMiddleware, movieController.movieSearch);
 
 module.exports = router;
