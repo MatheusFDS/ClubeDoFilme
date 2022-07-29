@@ -14,4 +14,6 @@ router.get('/detail/:id', notLoggedUserMiddleware, movieController.movieDetail);
 
 router.get('/search', notLoggedUserMiddleware, movieController.movieSearch);
 
+router.post('/addAssistirMaisTardeApi', movieController.addAssistirMaisTardeApi);
+
 module.exports = router;

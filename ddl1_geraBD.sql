@@ -79,20 +79,17 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `grupodh`.`assistidos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `grupodh`.`assistidos` (
-  `id_assistidos` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome_filme` VARCHAR(30) NOT NULL,
-  `nome_usuario` VARCHAR(30) NOT NULL,
-  `data_inicio` DATE NULL DEFAULT NULL,
-  `id_filme` INT(11) NULL DEFAULT NULL,
-  `id_matricula` INT(11) NOT NULL,
-  PRIMARY KEY (`id_assistidos`),
+CREATE TABLE IF NOT EXISTS `grupodh`.`usuario_filme_lista` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_filme` INT NOT NULL,
+  `id_matricula` INT NOT NULL,  
+  PRIMARY KEY (`id`),
   -- INDEX `id_filme` (`id_filme` ASC) VISIBLE,
 --   INDEX `id_matricula` (`id_matricula` ASC) VISIBLE,
-  CONSTRAINT `assistidos_ibfk_1`
+  CONSTRAINT `usuario_filme_lista_ibfk_1`
     FOREIGN KEY (`id_filme`)
     REFERENCES `grupodh`.`filmes` (`id_filme`),
-  CONSTRAINT `assistidos_ibfk_2`
+  CONSTRAINT `usuario_filme_lista_ibfk_2`
     FOREIGN KEY (`id_matricula`)
     REFERENCES `grupodh`.`usuarios` (`id_matricula`))
 ENGINE = InnoDB

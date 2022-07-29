@@ -99,9 +99,30 @@ const movieController = {
             where : {
                 id_filme: {[Op.ne] : id}
             }                                                
-        });        
+        });
 
-        res.render('movieDetail', {filme, filmesRecomendados});
+        let listaFilmesUsuario;
+        try{
+            listaFilmesUsuario = await db.UsuarioFilmeLista.findOne({            
+                where: {             
+                    id_filme: id,
+                    id_matricula: req.session.userLogged.id_matricula
+                }
+            })
+        } catch(error){
+            console.log('erro') ///renderizar ou redirecionar para página de erro
+        };
+        
+        console.log(listaFilmesUsuario)
+
+        let onList;
+        if(listaFilmesUsuario == undefined){
+            onList=0;
+        } else {
+            onList=1;
+        }
+
+        res.render('movieDetail', {filme, filmesRecomendados, onList});
     },    
     movieSearch: async (req, res) => {
         
@@ -132,6 +153,20 @@ const movieController = {
         // res.send(filmesEncontrados);
 
         res.render('movieSearch', {filmePesquisado, filmesEncontrados, mensagemRetorno})
+    },
+    addAssistirMaisTardeApi: async(req, res) => {
+        console.log("PASSOU NA 'API'")
+        console.log(req.body)
+
+        dataToInsertList = {
+            id_matricula: req.session.userLogged.id_matricula,
+            id_filme: req.body.id_filme
+        }
+        console.log(dataToInsertList);
+        
+        await db.UsuarioFilmeLista.create(dataToInsertList)
+
+        return res.json('deu certo');
     }
 };
 

@@ -120,10 +120,6 @@ body{
     border: 0;
 }
 
-#btn-plus {
-    background-color: #d11149;
-}
-
 .button .btn i{
     margin-right: 0.5rem;
 }
@@ -209,14 +205,5 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    display:none;
-}
-
-#id-filme-invisible {
-    display: none;
-}
-
-#btn-adicionado {
-    background-color: black;
     display:none;
 }

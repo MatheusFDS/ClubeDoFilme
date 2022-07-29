@@ -230,6 +230,3 @@ VALUES (3,  'Assinatura anual', 12, 189.90),
 
 -- insert into pedidos(id_pedido, valor_pago, dt_inic_assinatura, dt_fim_assinatura, id_matricula, id_produto)
 -- values(default, 18.9, '2022-07-08', '2022-07-08', 3, 1)
-
--- select * from pedidos
--- select * from usuarios

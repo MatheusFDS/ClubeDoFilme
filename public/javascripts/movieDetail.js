@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     // ================ botao Assistir, eventos de mouse ========
-    let botaoAssistir = document.querySelector('.btn');        
+    let botaoAssistir = document.querySelector('#btn-play');        
 
     //altera estilo ao passar o mouse
     botaoAssistir.addEventListener('mouseover', function() {
@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
 
     let avatarFilme = document.getElementById('avatar');
     let stringAvatarFilme = avatarFilme.innerHTML;
-    console.log(stringAvatarFilme);
+    // console.log(stringAvatarFilme);
 
     let containerImagem = document.querySelector('.container');
     // console.log(containerImagem.style.backgroundImage);
@@ -35,7 +35,43 @@ window.addEventListener('load', function () {
 
     });    
 
-    // let divPrincipal = document.querySelector('.container');
-    // divPrincipal.style.display="none";
+    // ==================== botao assistir mais tarde ================================    
+    let botaoAssistirMaisTarde = document.querySelector('#btn-plus');
+
+    //altera estilo ao passar o mouse
+    botaoAssistirMaisTarde.addEventListener('mouseover', function() {
+        botaoAssistirMaisTarde.style.cursor = 'pointer';        
+    });
+
+    botaoAssistirMaisTarde.addEventListener('click', async function() {
+        // const api = require("./requests/default");
+        // let ver = await api.get('/testeApi');
+        
+            data = {id_filme: parseInt(document.getElementById('id-filme-invisible').innerText)};
+
+            let settings = {
+                method: 'POST',
+                //mode: 'no-cors',
+                body : JSON.stringify(data),
+                headers: {
+                'Content-Type':  'application/json'
+                }
+            }
+
+            fetch("http://localhost:3000/movie/addAssistirMaisTardeApi", settings)
+            .then(response => response.json())
+            .then(dataDecode => console.log(dataDecode))
+            .catch(error => console.log(error))
+            
+            botaoAssistirMaisTarde.style.display = 'none';
+
+            let botaoAdicionado = document.getElementById('btn-adicionado');
+            // console.log(botaoAdicionado);
+            botaoAdicionado.style.display = 'block';
+        
+        
+    });
+
+    // ==================== FIM - botao assistir mais tarde ================================    
 
 });

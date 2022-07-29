@@ -59,15 +59,7 @@
                     <%=filme.titulo%>
                 </span>
                 <div class="button">
-                    <button class="btn" id="btn-play"> <i class="fas fa-play"></i>Assistir</button>
-                </div>
-                <%if(onList == 0){ %>
-                <div class="button">
-                    <button class="btn" id="btn-plus"> <i class="fas fa-plus"></i>Assistir mais tarde</button>
-                </div>
-                <% } %>
-                <div class="button">
-                    <button class="btn" id="btn-adicionado">Adicionado</button>
+                    <button class="btn"> <i class="fas fa-play"></i>Assistir</button>
                 </div>
             </div>
 
@@ -162,8 +154,6 @@
     <div class="player">
         <iframe width="560" height="420" src="<%=filme.rota_filme%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-    <span id="id-filme-invisible"><%=filme.id_filme%></span>
 
 <script src="/javascripts/movieDetail.js"></script>
   </body>

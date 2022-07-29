@@ -40,9 +40,4 @@ router.get('/checkout', notLoggedUserMiddleware, checkoutController.checkout);
 
 router.post('/checkout', notLoggedUserMiddleware, checkoutController.processCheckout);
 
-// apagar essa rota ao fim dos testes, pois a página é rendrizada como resposta do formulário.
-router.get('/checkout/confirmation', (req, res) => {
-    res.render('checkout_confirmation');
-});
-
 module.exports = router;
