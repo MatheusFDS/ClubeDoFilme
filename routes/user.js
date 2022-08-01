@@ -40,4 +40,8 @@ router.get('/checkout', notLoggedUserMiddleware, checkoutController.checkout);
 
 router.post('/checkout', notLoggedUserMiddleware, checkoutController.processCheckout);
 
+router.put('/profile/update', notLoggedUserMiddleware, upload.single("avatar"), userController.processUploadAvatar);
+
+router.delete('/profile/delete', notLoggedUserMiddleware, userController.destroy);
+
 module.exports = router;

@@ -19,10 +19,22 @@
                     <img src="../profile/<%= userLogged.avatar %>"/>
                 </div>
                 <div class="dados">
-                    <h2><%= userLogged.nome %></h2>
+                    <h2><%= userLogged.nome_completo %></h2>
                     <h2><%= userLogged.email %></h2>
+                    <br>
+                    <form action="/user/profile/update?_method=PUT" id="form-file" method="POST" enctype="multipart/form-data">
+                        <label  for="avatar"> Alterar Foto de Perfil</label>
+                        <input class="form-control" type="file" id="avatar" name="avatar"  autocomplete="off">                        
+                        
+                        <button type="submit" class="btn-submit-avatar">Confirmar Alteração</button>
+                    </form>
+                    <form action="/user/profile/delete?_method=DELETE" method="POST">
+                        <button type="submit" class="btn-submit-delete">Excluir Conta</button>                            
+                    </form>         
                 </div>
+                
             </div>
         </div>
+        <script src="/javascripts/userProfile.js"></script>
         </body>
- 
+ </html>

@@ -1,5 +1,7 @@
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
+const fs = require('fs');
+const path = require('path');
 
 const User = require('../models/User');
 const db = require('../database/models');
@@ -144,9 +146,67 @@ const userController = {
     },
 
     profile: (req, res) => {
+        console.log("DADOS DA SESSION", req.session.userLogged);
+        // let ver = path.join(__dirname,'../public/profile/ver');
+        // console.log('\nDIRETORIO: ', ver);
+
         return res.render('userProfile', {
             userLogged: req.session.userLogged
         });
+    },
+
+    processUploadAvatar: async(req, res) => {
+        // console.log('consulta BD:')
+        // let user = await db.Usuario.findByPk(req.session.userLogged.id_matricula);
+        // console.log('USER: ', user);
+
+        let avatarOld = req.session.userLogged.avatar;
+        
+        // userToUpdate = {...user};        
+        // userToUpdate.dataValues.avatar = req.file.filename;
+
+        let ver;
+        try{
+            await db.Usuario.update({
+                    avatar: req.file.filename
+                },
+                {
+                    where:{
+                        id_matricula: req.session.userLogged.id_matricula
+                    }
+                }
+            )
+        }
+        catch(error){
+            res.send(error)
+        }
+        
+        // res.send(ver);
+
+        let filenameToDestroy = path.join(__dirname,'../public/profile/');
+        filenameToDestroy = filenameToDestroy+avatarOld;
+        // console.log('FILE TO DESTROY: ', filenameToDestroy)
+
+        fs.unlinkSync(filenameToDestroy);
+
+        res.redirect('/user/profile');
+    },
+    
+    destroy: async (req, res) => {
+        
+        try{
+            db.UsuarioFilmeLista.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+            db.Pedido.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+            db.Usuario.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+        }
+        catch(error){
+            console.log('ERRO na exclusão da conta'); // implementar página de erro
+        }
+               
+        res.clearCookie('userEmail')
+        req.session.destroy();
+        return res.redirect('/');
+
     },
 
     logout: (req, res) => {
