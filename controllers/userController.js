@@ -202,9 +202,16 @@ const userController = {
         catch(error){
             console.log('ERRO na exclusão da conta'); // implementar página de erro
         }
-               
+        
+        // apaga avatar do usuário
+        let avatarOld = req.session.userLogged.avatar;
+        let filenameToDestroy = path.join(__dirname,'../public/profile/');
+        filenameToDestroy = filenameToDestroy+avatarOld;        
+        fs.unlinkSync(filenameToDestroy);
+
         res.clearCookie('userEmail')
-        req.session.destroy();
+        req.session.destroy();        
+
         return res.redirect('/');
 
     },
