@@ -8,6 +8,7 @@ const logDBMiddleware = require('../middlewares/logDB');
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
 
+const subscribedUserMiddleware = require('../middlewares/subscribedUserMiddleware');
 
 
 // Controllers
@@ -36,7 +37,7 @@ router.get('/logout', notLoggedUserMiddleware, userController.logout);
 // Profile
 router.get('/profile', notLoggedUserMiddleware, userController.profile);
 
-router.get('/checkout', notLoggedUserMiddleware, checkoutController.checkout);
+router.get('/checkout', notLoggedUserMiddleware, subscribedUserMiddleware, checkoutController.checkout);
 
 router.post('/checkout', notLoggedUserMiddleware, checkoutController.processCheckout);
 

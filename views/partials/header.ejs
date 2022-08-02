@@ -19,6 +19,7 @@
                     <img src="/images/logo.png"/>
                 </a>
             </div>
+            <% if (locals.isLogged) { %>
             <div class="search">
                  <div class="search-box">
                     <input type="text" class="search-text"  placeholder="Pesquisar...">
@@ -27,21 +28,22 @@
                      </a>
                 </div>
              </div>
+             <% } %>
             <div class="login">
 
            <% if (locals.isLogged) { %>
             <form action="/user/profile" method="get">
-                <button class="profile" type="submit">perfil</button>
+                <button class="profile" type="submit">Perfil</button>
             </form>
             <form action="/user/logout" method="get">
-                <button class="logout" type="submit">sair</button>
+                <button class="logout" type="submit">Sair</button>
             </form>
           <% } else { %>
             <form action="/user/login" method="get">
-            <button class="entrar" type="submit">entrar</button>
+            <button class="entrar" type="submit">Entrar</button>
             </form>
             <form action="/user/register"  method="get">
-            <button class="cadastro" type="submit">cadastro</button>
+            <button class="cadastro" type="submit">Cadastro</button>
             </form>
             <% } %> 
             </div>
@@ -78,17 +80,17 @@
                     <% if(locals.isLogged) { %>
                        
                     <form action="/user/profile" method="get">
-                        <button class="profile-mobile" type="submit">perfil</button>
+                        <button class="profile-mobile" type="submit">Perfil</button>
                         </form>
                         <form action="/user/logout" method="get">
-                         <button class="logout-mobile" type="submit">sair</button>
+                         <button class="logout-mobile" type="submit">Sair</button>
                         </form>
                         <% } else  { %>
                                 <form action="/user/login" method="get">
-                                <button class="entrar-mobile" type="submit">entrar</button>
+                                <button class="entrar-mobile" type="submit">Entrar</button>
                                 </form>
                                 <form action="/user/register" method="get">
-                                 <button class="cadastro-mobile" type="submit">cadastro</button>
+                                 <button class="cadastro-mobile" type="submit">Cadastro</button>
                                 </form>
                         <% } %>
                  </div>

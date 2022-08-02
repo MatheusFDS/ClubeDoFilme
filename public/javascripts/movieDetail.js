@@ -38,6 +38,9 @@ window.addEventListener('load', function () {
     // ==================== botao assistir mais tarde ================================    
     let botaoAssistirMaisTarde = document.querySelector('#btn-plus');
 
+    // desabilita função de add. na lista de filmes
+    botaoAssistirMaisTarde.style.display ='none';
+
     //altera estilo ao passar o mouse
     botaoAssistirMaisTarde.addEventListener('mouseover', function() {
         botaoAssistirMaisTarde.style.cursor = 'pointer';        

@@ -47,21 +47,22 @@ const movieController = {
         
         let filmesDrama = filmesDramaTotal.filter(filmeDrama => {
             
+            
             //verifica se o filme de drama já foi apresentado como animação.
             let resultado = filmesAnimacao.find(filmeAnimacao => {
                 if(filmeAnimacao.id_filme === filmeDrama.id_filme){
                     return filmeAnimacao;
                 }
-            });                        
-            
+            })                           
+
             if(resultado === undefined){
                 // console.log(filmeDrama.titulo);
                 return filmeDrama;
             } /*else {
                 console.log(resultado.titulo);
             }*/
-
-        });        
+            
+        });         
 
         res.render('movieList', {filmesLancamentoOuOscar, filmesAnimacao, filmesDrama});
     },

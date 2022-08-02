@@ -183,7 +183,7 @@ const userController = {
         
         // res.send(ver);
 
-        let filenameToDestroy = path.join(__dirname,'../public/profile/');
+        let filenameToDestroy = path.join(__dirname,'../public/images/profile/');
         filenameToDestroy = filenameToDestroy+avatarOld;
         // console.log('FILE TO DESTROY: ', filenameToDestroy)
 
@@ -195,9 +195,9 @@ const userController = {
     destroy: async (req, res) => {
         
         try{
-            db.UsuarioFilmeLista.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
-            db.Pedido.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
-            db.Usuario.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+            await db.UsuarioFilmeLista.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+            await db.Pedido.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
+            await db.Usuario.destroy({where: {id_matricula: req.session.userLogged.id_matricula}})
         }
         catch(error){
             console.log('ERRO na exclusão da conta'); // implementar página de erro
@@ -205,8 +205,8 @@ const userController = {
         
         // apaga avatar do usuário
         let avatarOld = req.session.userLogged.avatar;
-        let filenameToDestroy = path.join(__dirname,'../public/profile/');
-        filenameToDestroy = filenameToDestroy+avatarOld;        
+        let filenameToDestroy = path.join(__dirname,'../public/images/profile/');
+        filenameToDestroy = filenameToDestroy+avatarOld;
         fs.unlinkSync(filenameToDestroy);
 
         res.clearCookie('userEmail')
