@@ -95,17 +95,19 @@ const userController = {
     loginProcess: async(req, res) => {
 
         let userToLogin;
-        try {
-            userToLogin = await db.Usuario.findOne({
-                where: {
-                    email: {
-                        [Op.like]: `%${req.body.email}%`
+        if(req.body.email.length !== 0){
+            try {
+                userToLogin = await db.Usuario.findOne({
+                    where: {
+                        email: {
+                            [Op.like]: `%${req.body.email}%`
+                        }
                     }
-                }
-            })
-        } catch (error) {       
-            console.log('erro ao recuperar o e-mail na base de dados'); //redirecionar para página de erro.
-        };
+                })
+            } catch (error) {       
+                console.log('erro ao recuperar o e-mail na base de dados'); //redirecionar para página de erro.
+            };
+        }
 
         
         // let userToLogin = User.findUserbyField('email', req.body.email);        
