@@ -19,4 +19,10 @@ window.addEventListener('load', () => {
         }
     })
 
+    btnSubmit.addEventListener('click', (event) => {
+        if(inputFoto.value.length === 0){
+            event.preventDefault();
+         }
+    })
+
 })
