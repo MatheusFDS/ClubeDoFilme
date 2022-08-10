@@ -77,7 +77,6 @@ label[for="avatar"]{
     box-sizing: border-box;
     padding-top: 8px;
     margin-right: 5px;
-    margin-bottom: 0px;
 }
 
 #form-file {
@@ -94,17 +93,8 @@ label[for="avatar"]{
     margin-left: 5px;
 }
 
-.btn-delete{
+.btn-submit-delete{
     background-color: #d11149;
-    color: white;
-    width: 165px;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.btn-secondary{
-    background-color: gray;
     color: white;
     width: 165px;
     padding: 10px;
@@ -115,17 +105,4 @@ label[for="avatar"]{
 
 label[for="avatar"] {
     cursor: pointer;
-}
-
-/*incluído para ajustar o header após o uso de bootstrap*/
-.modal-body {
-    color: black;
-}
-
-.modal-title {
-    color: black;
-}
-
-.search-box { 
-    box-sizing: content-box;  
 }

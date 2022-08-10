@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/userProfile.css">
+    <title>Profile</title>
+</head>
+    <body>
+       
+        <header>
+            <%- include('partials/header') %>
+        </header>
+
+        <div class="areaProfile">
+            <div class="areaItems">
+                <div class="img-avatar">
+                    <img src="../images/profile/<%= userLogged.avatar %>"/>
+                </div>
+                <div class="dados">
+                    <h2><%= userLogged.nome_completo %></h2>
+                    <h2><%= userLogged.email %></h2>
+                    <br>
+                    <form action="/user/profile/update?_method=PUT" id="form-file" method="POST" enctype="multipart/form-data">
+                        <label  for="avatar"> Alterar Foto de Perfil</label>
+                        <input class="form-control" type="file" id="avatar" name="avatar"  autocomplete="off">                        
+                        
+                        <button type="submit" class="btn-submit-avatar">Confirmar Alteração</button>
+                    </form>
+                    <form action="/user/profile/delete?_method=DELETE" method="POST">
+                        <button type="submit" class="btn-submit-delete">Excluir Conta</button>                            
+                    </form>         
+                </div>
+                
+            </div>
+        </div>
+        <script src="/javascripts/userProfile.js"></script>
+        </body>
+ </html>

@@ -457,3 +457,16 @@ Credits
 #input_total{
   display:none;
 }
+
+/*incluído para ajustar o header após o uso de bootstrap*/
+/* .modal-body {
+  color: black;
+}
+
+.modal-title {
+  color: black;
+} */
+
+.search-box { 
+  box-sizing: content-box;  
+}
