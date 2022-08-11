@@ -122,6 +122,8 @@ body{
 
 #btn-plus {
     background-color: #d11149;
+    /*desabilita botão que adiciona na lista de filmes*/
+    display: none;
 }
 
 .button .btn i{
