@@ -464,3 +464,6 @@ Credits
   display:none;
 }
 
+.search-box { 
+  box-sizing: content-box;  
+}
