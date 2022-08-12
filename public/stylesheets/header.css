@@ -152,9 +152,12 @@ justify-content: space-evenly;
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
- background: rgb(34, 32, 32);
+  background: rgb(34, 32, 32);
   height: 70px;
   width: 100%;
+  
+  /*propriedade adicionada após o uso de bootstrap na página de perfil do usuário, pois o bootstrap estava quebrando o header com o valor wrap*/
+  flex-wrap: nowrap;
 }
 
 .entrar-mobile {
