@@ -8,7 +8,7 @@
 .areaProfile {
     display: flex;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background: #d11149;
@@ -68,27 +68,29 @@ label[for="avatar"]{
     /* border-radius: 5%; */
     /* padding: 10px         */
     height: 40px;
-    width: 165px;
-    /* display: inline-block; */
+    width: 40%;    
     text-align: center;    
     /* appearance: auto; */
     /* display: block; */
     vertical-align: middle;
     box-sizing: border-box;
     padding-top: 8px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 100%
 }
 
 #form-file {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
 .btn-submit-avatar{
     height: 40px;
-    width: 165px;
+    width: 40%;
     background-color: green;
     color: white;
     margin-left: 5px;
@@ -112,10 +114,6 @@ label[for="avatar"]{
     cursor: pointer;
 }
 
-
-label[for="avatar"] {
-    cursor: pointer;
-}
 
 /*incluído para ajustar o header após o uso de bootstrap*/
 .modal-body {
